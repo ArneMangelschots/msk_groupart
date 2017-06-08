@@ -1,6 +1,8 @@
 import {observable, action} from 'mobx';
 
 import Event from '../models/Event';
+import checkDates from '../lib/checkDates';
+import moment from 'moment';
 
 class Store {
 
@@ -14,6 +16,9 @@ class Store {
   openingHours = {};
 
   @observable
+  tents = [];
+
+  @observable
   hoursByDay = []
 
   @observable
@@ -21,6 +26,7 @@ class Store {
 
   constructor() {
     this.addHours();
+    this.addTents();
   }
 
   addHours = () => {
@@ -28,6 +34,13 @@ class Store {
       .then(r => r.json())
       .then(d => this.openingHours = d.openingHours);
   }
+
+  addTents = () => {
+    fetch(`../assets/data/tentoonstellingen.json`)
+      .then(r => r.json())
+      .then(d => this.tents = d[`tentoonstellingen`]);
+  }
+
 
   @action
   addEvent = data => {
@@ -39,7 +52,6 @@ class Store {
   setHours = date => {
     const formattedDate = new Date(date);
     const day = formattedDate.getDay();
-    console.log(day);
     const hours = this.openingHours[`${day}`];
     const hoursArray = hours.split(`,`);
     this.hoursByDay = hoursArray;
@@ -48,6 +60,13 @@ class Store {
   @action
   setWhat = value => {
     this.what = value;
+  }
+
+  @action
+  checkTentDate = date => {
+    console.log(date);
+    const newTents = this.tents.filter(t => checkDates(date, t[`end`]));
+    this.tents = newTents;
   }
 
 }

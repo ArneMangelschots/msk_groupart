@@ -1,14 +1,14 @@
 /* eslint-disable react/jsx-filename-extension */
+//import {Redirect} from 'react-router-dom';
 
 import React from 'react';
-
 import {observer, inject, PropTypes} from 'mobx-react';
+
+import moment from 'moment';
 
 const EventForm = ({store}) => {
 
-  const {setHours, hoursByDay, what, setWhat, addEvent} = store;
-
-  console.log(hoursByDay.length);
+  const {setHours, hoursByDay, what, setWhat, addEvent, tents, checkTentDate} = store;
 
   let $date = ``;
   let $hour = ``;
@@ -16,9 +16,12 @@ const EventForm = ({store}) => {
   let $what = ``;
   let $title = ``;
 
+  const today = moment().format(`YYYY-MM-DD`);
+  const maxDate = moment(today).add(1, `month`).format(`YYYY-MM-DD`);
 
   const handleDateChange = () => {
     setHours($date.value);
+    checkTentDate($date.value);
   };
 
   const handleRadioChange = e => {
@@ -35,6 +38,11 @@ const EventForm = ({store}) => {
       title: $title.value
     };
     addEvent(data);
+    $date.value = ``;
+    $hour.value = ``;
+    $capacity.value = ``;
+    $what.value = ``;
+    $title.value = ``;
   };
 
   return (
@@ -46,6 +54,9 @@ const EventForm = ({store}) => {
         id='date'
         onChange={handleDateChange}
         ref={$el => $date = $el}
+        defaultValue={today}
+        min={today}
+        max={maxDate}
       /><br /><br />
       {hoursByDay.length > 2 &&
       <div className='uur'>
@@ -90,11 +101,11 @@ const EventForm = ({store}) => {
       <div className='tentoonstellingen'>
         <label htmlFor='tents'>Kies een tentoonstelling</label>
          <select ref={$el => $what = $el}>
-          <option>KMSKA te gast</option>
-          <option>Restauratie Lam Gods</option>
-          <option>MetaFloristiek</option>
-          <option>Written Room</option>
-          <option>Manufactories of Caring Space-Time</option>
+           {
+             tents.map(t => (
+               <option key={t.name}>{t.name}</option>
+             ))
+           }
         </select>
       </div>
       }<br />
