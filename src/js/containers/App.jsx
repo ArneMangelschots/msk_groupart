@@ -4,24 +4,42 @@ import {string} from 'prop-types';
 import {inject, observer} from 'mobx-react';
 import DevTools from 'mobx-react-devtools';
 
-import {Route} from 'react-router-dom';
-import Home from './Home';
+import {Route, Switch, Redirect} from 'react-router-dom';
+import Overview from './Overview';
+import Favorites from './Favorites';
+import Add from './Add';
+
+import SideNav from '../components/SideNav';
 
 const App = ({name}) => (
 
   <section>
 
-    {process.env.NODE_ENV !== `production` ? <DevTools/> : null}
+    {process.env.NODE_ENV !== `production` ? <DevTools /> : null}
 
     <header>
       <h1>Hello, {name}</h1>
     </header>
 
-    <section>
-      <Route
-        exact path='/'
-        component={Home}
-      />
+    <section className='container'>
+      <SideNav />
+        <Switch>
+          <Route
+            exact path='/ontdek'
+            component={Overview}
+          />
+          <Route
+            exact path='/favorites'
+            component={Favorites}
+          />
+          <Route
+            exact path='/add'
+            component={Add}
+          />
+          <Route
+              render={() => <Redirect to='/ontdek' />}
+            />
+        </Switch>
     </section>
 
   </section>
