@@ -38,7 +38,7 @@ const EventForm = ({store}) => {
       title: $title.value
     };
     addEvent(data);
-    $date.value = ``;
+    $date.value = today;
     $hour.value = ``;
     $capacity.value = ``;
     $what.value = ``;
@@ -54,7 +54,6 @@ const EventForm = ({store}) => {
         id='date'
         onChange={handleDateChange}
         ref={$el => $date = $el}
-        defaultValue={today}
         min={today}
         max={maxDate}
       /><br /><br />
@@ -72,7 +71,7 @@ const EventForm = ({store}) => {
       }
       {hoursByDay.length < 2 &&
       <div className='uur'>
-        <p className='error'>Sorry het museum is dan gesloten! Kies een andere dag</p>
+        <p className='error'>Kies een dag!</p>
       </div>
       }<br /><br />
       <label htmlFor='title'>Geef je event een titel/korte beschrijving</label>

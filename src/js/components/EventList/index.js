@@ -7,17 +7,45 @@ import Event from './Event';
 
 const EventList = ({store}) => {
 
-  const {events} = store;
-
+  const {thisWeek, nextWeek, thisMonth} = store;
   return (
     <div className='event-list'>
-      <ul>
-        {
-          events.map(event => (
-            <Event key={event._id} {...event} />
-          ))
-        }
-      </ul>
+      {thisWeek.length > 0 &&
+        <div className='this-week'>
+          <h2>Deze week</h2>
+          <ul>
+            {
+              thisWeek.map(e => (
+                <Event key={e._id} {...e} />
+              ))
+            }
+          </ul>
+        </div>
+      }
+      {nextWeek.length > 0 &&
+        <div className='this-week'>
+          <h2>Volgende week</h2>
+          <ul>
+            {
+              nextWeek.map(e => (
+                <Event key={e._id} {...e} />
+              ))
+            }
+          </ul>
+        </div>
+      }
+      {thisMonth.length > 0 &&
+        <div className='this-week'>
+          <h2>Rest van de maand</h2>
+          <ul>
+            {
+              thisMonth.map(e => (
+                <Event key={e._id} {...e} />
+              ))
+            }
+          </ul>
+        </div>
+      }
     </div>
   );
 };

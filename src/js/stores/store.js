@@ -1,7 +1,8 @@
-import {observable, action} from 'mobx';
+import {observable, action, computed} from 'mobx';
 
 import Event from '../models/Event';
 import checkDates from '../lib/checkDates';
+
 import moment from 'moment';
 
 class Store {
@@ -67,6 +68,27 @@ class Store {
     console.log(date);
     const newTents = this.tents.filter(t => checkDates(date, t[`end`]));
     this.tents = newTents;
+  }
+
+  @computed
+  get thisWeek() {
+    const week = moment().add(7, `day`).format(`YYYY-MM-DD`);
+    const thisWeek = this.events.filter(e => e[`date`] <= week);
+    return thisWeek;
+  }
+
+  @computed
+  get nextWeek() {
+    const week = moment().add(7, `day`).format(`YYYY-MM-DD`);
+    const twoWeeks = moment().add(14, `day`).format(`YYYY-MM-DD`);
+    const nextWeek = this.events.filter(e => e[`date`] > week && e[`date`] <= twoWeeks);
+    return nextWeek;
+  }
+  @computed
+  get thisMonth() {
+    const twoWeeks = moment().add(14, `day`).format(`YYYY-MM-DD`);
+    const thisMonth = this.events.filter(e => e[`date`] > twoWeeks);
+    return thisMonth;
   }
 
 }
