@@ -5,17 +5,12 @@ import React from 'react';
 const LoginForm = ({store}) => {
 
   let $username = ``;
-  let $password = ``;
 
   const {handleLogin} = store;
 
   const handleSubmit = e => {
     e.preventDefault();
-    const data = {
-      login: $username.value,
-      password: $password.value
-    };
-    handleLogin(data);
+    handleLogin($username.value);
   };
 
   return (
@@ -30,7 +25,6 @@ const LoginForm = ({store}) => {
       <input
         type='password'
         id='password'
-        ref={$el => $password = $el}
       />
       <input
         type='submit'

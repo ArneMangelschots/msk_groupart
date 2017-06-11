@@ -9,55 +9,60 @@ import Overview from './Overview';
 import Favorites from './Favorites';
 import Add from './Add';
 import Login from './Login';
+import Logout from '../components/Logout';
 
 import SideNav from '../components/SideNav';
 
-const App = ({name}) => (
+const App = ({user}) => {
 
-  <section>
 
-    {process.env.NODE_ENV !== `production` ? <DevTools /> : null}
-
-    <header>
-      <h1>Hello, {name}</h1>
-    </header>
-
-    <section className='container'>
-      <SideNav />
-        <Switch>
-          <Route
-            exact path='/ontdek'
-            component={Overview}
-          />
-          <Route
-            exact path='/favorites'
-            component={Favorites}
-          />
-          <Route
-            exact path='/add'
-            component={Add}
-          />
-          <Route
-            exact path='/login'
-            component={Login}
-          />
-          <Route
-              render={() => <Redirect to='/ontdek' />}
-            />
-        </Switch>
+  return (
+    <section>
+      {process.env.NODE_ENV !== `production` ? <DevTools /> : null}
+      <header>
+        <h1>Msk</h1>
+        {user.length > 0 &&
+          <Logout />
+        }
+      </header>
+      {user.length > 0 &&
+        <section className='container'>
+          <SideNav />
+            <Switch>
+              <Route
+                exact path='/ontdek'
+                component={Overview}
+              />
+              <Route
+                exact path='/favorites'
+                component={Favorites}
+              />
+              <Route
+                exact path='/add'
+                component={Add}
+              />
+              <Route
+                  render={() => <Redirect to='/ontdek' />}
+                />
+            </Switch>
+        </section>
+      }
+      {user.length < 1 &&
+        <Login />
+      }
     </section>
 
-  </section>
+  );
 
-);
+};
 
 App.propTypes = {
-  name: string.isRequired
+  user: string.isRequired
 };
 
 export default inject(
   ({store}) => ({
-    name: store.name
+    user: store.user
   })
 )(
   observer(App)

@@ -4,9 +4,6 @@ import Event from '../models/Event';
 import checkDates from '../lib/checkDates';
 
 import moment from 'moment';
-import usersAPI from '../lib/api/users';
-
-import jwtDecode from 'jwt-decode';
 
 class Store {
 
@@ -29,7 +26,8 @@ class Store {
   what = `vrij`
 
   @observable
-  user = ``;
+  user = `arnem`;
+
 
   constructor() {
     this.addHours();
@@ -51,6 +49,8 @@ class Store {
 
   @action
   addEvent = data => {
+    data[`user`] = this.user;
+    console.log(data);
     const event = new Event(data);
     this.events.push(event);
     return true;
@@ -78,17 +78,13 @@ class Store {
   }
 
   @action
-  handleLogin = data => {
-    usersAPI.login(data)
-    .then(user => jwtDecode(user[`token`]))
-    .then(token => this.user = token)
-    .then(token => this._getUser(token));
+  handleLogin = username => {
+    this.user = username;
   }
 
-  _getUser = token => {
-    const id = token[`sub`];
-    usersAPI.getUser(id)
-      .then(user => console.log(user));
+  @action
+  handleLogout = () => {
+    this.user = ``;
   }
 
   @computed

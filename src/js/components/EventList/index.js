@@ -8,6 +8,7 @@ import Event from './Event';
 const EventList = ({store}) => {
 
   const {thisWeek, nextWeek, thisMonth} = store;
+
   return (
     <div className='event-list'>
       {thisWeek.length > 0 &&
@@ -16,7 +17,7 @@ const EventList = ({store}) => {
           <ul>
             {
               thisWeek.map(e => (
-                <Event key={e._id} {...e} />
+                <Event key={e._id} {...e} nUsers={e.nUsers} />
               ))
             }
           </ul>
