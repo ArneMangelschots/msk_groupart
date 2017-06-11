@@ -8,6 +8,7 @@ import {Route, Switch, Redirect} from 'react-router-dom';
 import Overview from './Overview';
 import Favorites from './Favorites';
 import Add from './Add';
+import Login from './Login';
 
 import SideNav from '../components/SideNav';
 
@@ -35,6 +36,10 @@ const App = ({name}) => (
           <Route
             exact path='/add'
             component={Add}
+          />
+          <Route
+            exact path='/login'
+            component={Login}
           />
           <Route
               render={() => <Redirect to='/ontdek' />}

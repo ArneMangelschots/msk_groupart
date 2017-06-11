@@ -7,6 +7,7 @@ const SideNav = () => {
       <Link to='/ontdek'>Ontdek</Link>
       <Link to='/favorites'>favorites</Link>
       <Link to='/add'>Add Event</Link>
+      <Link to='/login'>Login</Link>
     </ul>
   );
 };

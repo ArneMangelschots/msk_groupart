@@ -2,11 +2,14 @@
 //import {Redirect} from 'react-router-dom';
 
 import React from 'react';
-import {observer, inject, PropTypes} from 'mobx-react';
+import {observer, inject, PropTypes as MobxProp} from 'mobx-react';
+import {withRouter} from 'react-router';
+import PropTypes from 'prop-types';
+
 
 import moment from 'moment';
 
-const EventForm = ({store}) => {
+const EventForm = ({store, history}) => {
 
   const {setHours, hoursByDay, what, setWhat, addEvent, tents, checkTentDate} = store;
 
@@ -30,18 +33,26 @@ const EventForm = ({store}) => {
 
   const handleFormSubmit = e => {
     e.preventDefault();
+    let whatValue = ``;
+    if (what === `vrij`) {
+      whatValue = `Vrij museumbezoek`;
+    } else {
+      whatValue = $what.value;
+    }
     const data = {
       date: $date.value,
       hour: $hour.value,
       capacity: $capacity.value,
-      what: $what.value,
+      what: whatValue,
       title: $title.value
     };
-    addEvent(data);
-    $date.value = today;
+    if (addEvent(data)) {
+      history.push(`/ontdek`);
+    }
+    $date.value = ``;
     $hour.value = ``;
     $capacity.value = ``;
-    $what.value = ``;
+    setWhat(`vrij`);
     $title.value = ``;
   };
 
@@ -124,10 +135,13 @@ const EventForm = ({store}) => {
   );
 };
 
+
+
 EventForm.propTypes = {
-  store: PropTypes.observableObject.isRequired
+  store: MobxProp.observableObject.isRequired,
+  history: PropTypes.object.isRequired
 };
 
 export default inject(`store`)(
-  observer(EventForm)
+  withRouter(observer(EventForm))
 );

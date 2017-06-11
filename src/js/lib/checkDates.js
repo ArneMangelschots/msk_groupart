@@ -1,5 +1,5 @@
-const checkDates = (a, b) => {
-  if (a < b) {
+const checkDates = (a, b1, b2) => {
+  if (a < b1 && a >= b2) {
     return true;
   } else {
     return false;

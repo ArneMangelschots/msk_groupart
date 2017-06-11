@@ -4,6 +4,9 @@ import Event from '../models/Event';
 import checkDates from '../lib/checkDates';
 
 import moment from 'moment';
+import usersAPI from '../lib/api/users';
+
+import jwtDecode from 'jwt-decode';
 
 class Store {
 
@@ -24,6 +27,9 @@ class Store {
 
   @observable
   what = `vrij`
+
+  @observable
+  user = ``;
 
   constructor() {
     this.addHours();
@@ -47,6 +53,7 @@ class Store {
   addEvent = data => {
     const event = new Event(data);
     this.events.push(event);
+    return true;
   }
 
   @action
@@ -66,8 +73,22 @@ class Store {
   @action
   checkTentDate = date => {
     console.log(date);
-    const newTents = this.tents.filter(t => checkDates(date, t[`end`]));
+    const newTents = this.tents.filter(t => checkDates(date, t[`end`], t[`begin`]));
     this.tents = newTents;
+  }
+
+  @action
+  handleLogin = data => {
+    usersAPI.login(data)
+    .then(user => jwtDecode(user[`token`]))
+    .then(token => this.user = token)
+    .then(token => this._getUser(token));
+  }
+
+  _getUser = token => {
+    const id = token[`sub`];
+    usersAPI.getUser(id)
+      .then(user => console.log(user));
   }
 
   @computed
