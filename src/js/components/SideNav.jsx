@@ -5,7 +5,7 @@ const SideNav = () => {
   return (
     <ul>
       <Link to='/ontdek'>Ontdek</Link>
-      <Link to='/favorites'>favorites</Link>
+      <Link to='/mijnEvents'>Mijn events</Link>
       <Link to='/add'>Add Event</Link>
     </ul>
   );

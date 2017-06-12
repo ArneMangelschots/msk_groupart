@@ -3,7 +3,7 @@
 import React from 'react';
 import {observer, inject, PropTypes} from 'mobx-react';
 
-import Event from './Event';
+import Event from '../Event';
 
 const EventList = ({store}) => {
 
@@ -29,7 +29,7 @@ const EventList = ({store}) => {
           <ul>
             {
               nextWeek.map(e => (
-                <Event key={e._id} {...e} />
+                <Event key={e._id} {...e} nUsers={e.nUsers} />
               ))
             }
           </ul>
@@ -41,7 +41,7 @@ const EventList = ({store}) => {
           <ul>
             {
               thisMonth.map(e => (
-                <Event key={e._id} {...e} />
+                <Event key={e._id} {...e} nUsers={e.nUsers} />
               ))
             }
           </ul>

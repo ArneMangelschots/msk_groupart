@@ -50,7 +50,6 @@ class Store {
   @action
   addEvent = data => {
     data[`user`] = this.user;
-    console.log(data);
     const event = new Event(data);
     this.events.push(event);
     return true;
@@ -87,6 +86,30 @@ class Store {
     this.user = ``;
   }
 
+  @action
+  joinEvent = id => {
+    const events = this.events.map(e => {
+      console.log(e);
+      if (e._id === id) {
+        e.users.push(this.user);
+      }
+      return e;
+    });
+    this.events = events;
+  }
+
+  @action
+  leaveEvent = id => {
+    const events = this.events.map(e => {
+      if (e._id === id) {
+        const index = e.users.indexOf(this.user);
+        e.users.splice(index, 1);
+      }
+      return e;
+    });
+    this.events = events;
+  }
+
   @computed
   get thisWeek() {
     const week = moment().add(7, `day`).format(`YYYY-MM-DD`);
@@ -106,6 +129,18 @@ class Store {
     const twoWeeks = moment().add(14, `day`).format(`YYYY-MM-DD`);
     const thisMonth = this.events.filter(e => e[`date`] > twoWeeks);
     return thisMonth;
+  }
+
+  @computed
+  get createdEvents() {
+    const createdEvents = this.events.filter(e => e[`creator`] === this.user);
+    return createdEvents;
+  }
+
+  @computed
+  get signedEvents() {
+    const signedEvents = this.events.filter(e => e[`users`].includes(this.user) && e[`creator`] !== this.user);
+    return signedEvents;
   }
 
 }

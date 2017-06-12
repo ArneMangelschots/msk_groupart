@@ -10,6 +10,7 @@ export default class Event {
   capacity = 0
   what = ``
   title = ``
+  creator = ``
 
   @observable
   users = ``
@@ -25,6 +26,7 @@ export default class Event {
     this.what = what;
     this.title = title;
     this.users = [user];
+    this.creator = user;
   }
 
   @computed

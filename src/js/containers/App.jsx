@@ -6,7 +6,7 @@ import DevTools from 'mobx-react-devtools';
 
 import {Route, Switch, Redirect} from 'react-router-dom';
 import Overview from './Overview';
-import Favorites from './Favorites';
+import MijnEvents from './MijnEvents';
 import Add from './Add';
 import Login from './Login';
 import Logout from '../components/Logout';
@@ -34,8 +34,8 @@ const App = ({user}) => {
                 component={Overview}
               />
               <Route
-                exact path='/favorites'
-                component={Favorites}
+                exact path='/mijnEvents'
+                component={MijnEvents}
               />
               <Route
                 exact path='/add'
