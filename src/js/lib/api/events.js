@@ -30,6 +30,12 @@ export default {
 
     return fetch(`${url}/${id}`, {method, body})
     .then(r => r.json());
+  },
+
+  delete: id => {
+    const method = `DELETE`;
+    return fetch(`${url}/${id}`, {method})
+    .then(r => r.json());
   }
 
 };

@@ -30,8 +30,10 @@ class Store {
   what = `vrij`
 
   @observable
-  user = `arnem`;
+  user = ``;
 
+  @observable
+  infoMessage = ``;
 
   constructor() {
     this.init();
@@ -144,10 +146,19 @@ class Store {
       if (e._id === id) {
         const index = this.events.indexOf(e);
         this.events.splice(index, 1);
+        eventsAPI.delete(e._id);
       }
     });
     this.events.reverse().reverse();
   }
+
+  @action
+  setMessage = content => {
+    this.infoMessage = content;
+    window.setTimeout(() => {this.infoMessage = ``;}, 5000);
+  }
+
+
 
   @computed
   get thisWeek() {

@@ -25,3 +25,7 @@ h1 {
     flex-direction: column;
   }
 }
+
+.info-message {
+  color: green;
+}

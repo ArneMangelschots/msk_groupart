@@ -96,4 +96,8 @@ h1 {
           flex-direction: column;
 }
 
+.info-message {
+  color: green;
+}
+
 /*# sourceMappingURL=style.css.map*/

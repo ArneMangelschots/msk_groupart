@@ -11,7 +11,7 @@ import moment from 'moment';
 
 const EventForm = ({store, history}) => {
 
-  const {setHours, hoursByDay, what, setWhat, add, tents, checkTentDate} = store;
+  const {setHours, hoursByDay, what, setWhat, add, tents, checkTentDate, setMessage} = store;
 
   let $date = ``;
   let $hour = ``;
@@ -48,6 +48,7 @@ const EventForm = ({store, history}) => {
     };
     if (add(data)) {
       console.log(`joe`);
+      setMessage(`Jou event is toegevoegd!`);
       history.push(`/ontdek`);
     }
     $date.value = ``;

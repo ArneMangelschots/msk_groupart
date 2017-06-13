@@ -11,13 +11,16 @@ import MijnEvents from './MijnEvents';
 import Add from './Add';
 import Login from './Login';
 import Logout from '../components/Logout';
+import Message from '../components/Message';
 import EventDetail from './EventDetail';
 
 import SideNav from '../components/SideNav';
 
 const App = ({store}) => {
 
-  const {user} = store;
+  const {user, infoMessage} = store;
+
+  console.log(infoMessage);
 
   return (
     <section>
@@ -28,12 +31,14 @@ const App = ({store}) => {
           <Logout />
         }
       </header>
-      {user.length > 0 &&
+      {infoMessage.length > 0 &&
+        <Message />
+      }
         <section className='container'>
-          <SideNav />
+          {user.length > 0 && <SideNav />}
             <Switch>
               <Route
-                exact path='/ontdek'
+                exact path='/home'
                 component={Overview}
               />
               <Route
@@ -49,13 +54,18 @@ const App = ({store}) => {
                 render={({match}) => <EventDetail match={match} />}
               />
               <Route
-                  render={() => <Redirect to='/ontdek' />}
+                exact path='/login'
+                component={Login}
+              />
+              <Route
+                  render={() => <Redirect to='/home' />}
               />
             </Switch>
         </section>
-      }
       {user.length < 1 &&
-        <Login />
+        <Route
+            render={() => <Redirect to='/login' />}
+        />
       }
     </section>
 
