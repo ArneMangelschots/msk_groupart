@@ -58,10 +58,17 @@ class Store {
       });
   }
 
+  getUser = () => {
+    if (localStorage.getItem(`user`)) {
+      this.user = localStorage.getItem(`user`);
+    }
+  }
+
   init = () => {
     this.addHours();
     this.addTents();
     this.getEvents();
+    this.getUser();
   }
 
   @action
@@ -107,10 +114,12 @@ class Store {
   @action
   handleLogin = username => {
     this.user = username;
+    localStorage.setItem(`user`, this.user);
   }
 
   @action
   handleLogout = () => {
+    localStorage.removeItem(`user`);
     this.user = ``;
   }
 

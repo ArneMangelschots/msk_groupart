@@ -7,7 +7,6 @@ import {Link} from 'react-router-dom';
 const Event = ({date, hour, what, nUsers, capacity, store, creator, users, _id}) => {
 
   const {user, joinEvent, leaveEvent, removeEvent, setMessage} = store;
-  console.log(users);
 
   const handleJoin = () =>  {
     joinEvent(_id);

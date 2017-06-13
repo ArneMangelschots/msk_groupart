@@ -13,6 +13,7 @@ import Login from './Login';
 import Logout from '../components/Logout';
 import Message from '../components/Message';
 import EventDetail from './EventDetail';
+import Start from './Start';
 
 import SideNav from '../components/SideNav';
 
@@ -20,22 +21,23 @@ const App = ({store}) => {
 
   const {user, infoMessage} = store;
 
-  console.log(infoMessage);
+  console.log(user);
 
   return (
     <section>
       {process.env.NODE_ENV !== `production` ? <DevTools /> : null}
+      {user.length > 0 &&
       <header>
         <h1>Msk</h1>
-        {user.length > 0 &&
           <Logout />
-        }
       </header>
+      }
       {infoMessage.length > 0 &&
         <Message />
       }
+      {user.length > 0 &&
         <section className='container'>
-          {user.length > 0 && <SideNav />}
+            <SideNav />
             <Switch>
               <Route
                 exact path='/home'
@@ -54,18 +56,25 @@ const App = ({store}) => {
                 render={({match}) => <EventDetail match={match} />}
               />
               <Route
-                exact path='/login'
-                component={Login}
-              />
-              <Route
                   render={() => <Redirect to='/home' />}
               />
             </Switch>
         </section>
+      }
       {user.length < 1 &&
-        <Route
-            render={() => <Redirect to='/login' />}
-        />
+        <Switch>
+          <Route
+              exact path='/groupart'
+              component={Start}
+          />
+          <Route
+            exact path='/login'
+            component={Login}
+          />
+          <Route
+              render={() => <Redirect to='/groupart' />}
+          />
+        </Switch>
       }
     </section>
 
