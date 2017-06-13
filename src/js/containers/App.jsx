@@ -1,7 +1,8 @@
-import React from 'react';
-import {string} from 'prop-types';
 
-import {inject, observer} from 'mobx-react';
+
+import React from 'react';
+
+import {observer, inject, PropTypes} from 'mobx-react';
 import DevTools from 'mobx-react-devtools';
 
 import {Route, Switch, Redirect} from 'react-router-dom';
@@ -10,11 +11,13 @@ import MijnEvents from './MijnEvents';
 import Add from './Add';
 import Login from './Login';
 import Logout from '../components/Logout';
+import EventDetail from './EventDetail';
 
 import SideNav from '../components/SideNav';
 
-const App = ({user}) => {
+const App = ({store}) => {
 
+  const {user} = store;
 
   return (
     <section>
@@ -42,8 +45,12 @@ const App = ({user}) => {
                 component={Add}
               />
               <Route
+                exact path='/event/:id'
+                render={({match}) => <EventDetail match={match} />}
+              />
+              <Route
                   render={() => <Redirect to='/ontdek' />}
-                />
+              />
             </Switch>
         </section>
       }
@@ -57,13 +64,9 @@ const App = ({user}) => {
 };
 
 App.propTypes = {
-  user: string.isRequired
+  store: PropTypes.observableObject.isRequired
 };
 
-export default inject(
-  ({store}) => ({
-    user: store.user
-  })
-)(
+export default inject(`store`)(
   observer(App)
 );

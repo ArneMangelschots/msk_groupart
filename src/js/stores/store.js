@@ -1,9 +1,13 @@
+import fetch from 'isomorphic-fetch';
+
 import {observable, action, computed} from 'mobx';
 
 import Event from '../models/Event';
 import checkDates from '../lib/checkDates';
 
 import moment from 'moment';
+
+import eventsAPI from '../lib/api/events';
 
 class Store {
 
@@ -30,8 +34,7 @@ class Store {
 
 
   constructor() {
-    this.addHours();
-    this.addTents();
+    this.init();
   }
 
   addHours = () => {
@@ -46,10 +49,33 @@ class Store {
       .then(d => this.tents = d[`tentoonstellingen`]);
   }
 
+  getEvents = () => {
+    eventsAPI.select()
+      .then(({events}) => {
+        events.map(e => this._addEvent(e));
+      });
+  }
+
+  init = () => {
+    this.addHours();
+    this.addTents();
+    this.getEvents();
+  }
 
   @action
-  addEvent = data => {
-    data[`user`] = this.user;
+  add = data => {
+    data.creator = this.user;
+    data.users = this.user;
+    eventsAPI.insert(data)
+      .then(e => this._addEvent(e));
+    return true;
+  }
+
+
+  @action
+  _addEvent = data => {
+    const users = data.users.split(`,`);
+    data.users = users;
     const event = new Event(data);
     this.events.push(event);
     return true;
@@ -91,6 +117,8 @@ class Store {
     const events = this.events.map(e => {
       console.log(e);
       if (e._id === id) {
+        const users = `${e.users},${this.user}`;
+        eventsAPI.addUser(id, users);
         e.users.push(this.user);
       }
       return e;
@@ -108,6 +136,17 @@ class Store {
       return e;
     });
     this.events = events;
+  }
+
+  @action
+  removeEvent = id => {
+    this.events.map(e => {
+      if (e._id === id) {
+        const index = this.events.indexOf(e);
+        this.events.splice(index, 1);
+      }
+    });
+    this.events.reverse().reverse();
   }
 
   @computed

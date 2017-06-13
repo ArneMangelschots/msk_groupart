@@ -2,10 +2,11 @@ import React from 'react';
 
 import {observer, inject, PropTypes} from 'mobx-react';
 import {string, number, object} from 'prop-types';
+import {Link} from 'react-router-dom';
 
-const Event = ({title, date, hour, what, nUsers, capacity, store, creator, users, _id}) => {
+const Event = ({date, hour, what, nUsers, capacity, store, creator, users, _id}) => {
 
-  const {user, joinEvent, leaveEvent} = store;
+  const {user, joinEvent, leaveEvent, removeEvent} = store;
   console.log(users);
 
   const handleJoin = () =>  {
@@ -16,11 +17,15 @@ const Event = ({title, date, hour, what, nUsers, capacity, store, creator, users
     leaveEvent(_id);
   };
 
+  const handleRemove = () => {
+    removeEvent(_id);
+  };
+
   return (
     <div className='event'>
-      {title} | {date} | {hour} | {what} | {nUsers}/{capacity}
+      <Link to={`/event/${_id}`}>{date} | {hour} | {what} | {nUsers}/{capacity}</Link>
       {creator === user &&
-        <button>Remove</button>
+        <button onClick={handleRemove}>Remove</button>
       }
       {users.includes(user) && creator !== user &&
         <button onClick={handleLeave}>Leave Event</button>
@@ -34,7 +39,6 @@ const Event = ({title, date, hour, what, nUsers, capacity, store, creator, users
 };
 
 Event.propTypes = {
-  title: string.isRequired,
   date: string.isRequired,
   hour: string.isRequired,
   what: string.isRequired,

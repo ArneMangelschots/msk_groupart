@@ -11,7 +11,7 @@ import moment from 'moment';
 
 const EventForm = ({store, history}) => {
 
-  const {setHours, hoursByDay, what, setWhat, addEvent, tents, checkTentDate} = store;
+  const {setHours, hoursByDay, what, setWhat, add, tents, checkTentDate} = store;
 
   let $date = ``;
   let $hour = ``;
@@ -46,7 +46,8 @@ const EventForm = ({store, history}) => {
       what: whatValue,
       title: $title.value
     };
-    if (addEvent(data)) {
+    if (add(data)) {
+      console.log(`joe`);
       history.push(`/ontdek`);
     }
     $date.value = ``;
@@ -85,13 +86,6 @@ const EventForm = ({store, history}) => {
         <p className='error'>Kies een dag!</p>
       </div>
       }<br /><br />
-      <label htmlFor='title'>Geef je event een titel/korte beschrijving</label>
-      <input
-        type='text'
-        id='title'
-        ref={$el => $title = $el}
-      />
-      <br /><br />
       <p>Wat ga je doen?</p><br />
       Vrij museumbezoek<input
         type='radio'
@@ -119,7 +113,14 @@ const EventForm = ({store, history}) => {
         </select>
       </div>
       }<br />
-      <label htmlFor='capacity'>Hoeveel personen mogen mee doeken?</label>
+      <label htmlFor='title'>Geef je event korte beschrijving</label><br />
+      <textarea
+        type='text'
+        id='title'
+        ref={$el => $title = $el}
+      />
+      <br /><br />
+      <label htmlFor='capacity'>Hoeveel personen mogen er mee met jou?</label>
       <input
         type='number'
         min='5'

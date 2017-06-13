@@ -1,15 +1,14 @@
-import uuid from 'uuid';
 import {computed, observable} from 'mobx';
 
 export default class Event {
 
-  _id = 0 //uuid.v4();
+  _id = 0
   created = 0
   date = ``
   hour = ``
   capacity = 0
   what = ``
-  title = ``
+  description = ``
   creator = ``
 
   @observable
@@ -17,16 +16,16 @@ export default class Event {
 
 
 
-  constructor({date, hour, capacity, what, title, user}) {
-    this._id = uuid.v4();
-    this.created = Date.now();
+  constructor({_id, created, date, hour, creator, capacity, what, description, users}) {
+    this._id = _id;
+    this.created = created;
     this.date = date;
     this.hour = hour;
     this.capacity = capacity;
     this.what = what;
-    this.title = title;
-    this.users = [user];
-    this.creator = user;
+    this.description = description;
+    this.users = users;
+    this.creator = creator;
   }
 
   @computed
