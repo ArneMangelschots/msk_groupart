@@ -15,9 +15,6 @@ class Store {
   events = []
 
   @observable
-  name = `Doek mee met het MSK`
-
-  @observable
   openingHours = {};
 
   @observable
@@ -34,6 +31,9 @@ class Store {
 
   @observable
   infoMessage = ``;
+
+  @observable
+  popup = false;
 
   constructor() {
     this.init();
@@ -119,8 +119,8 @@ class Store {
 
   @action
   handleLogout = () => {
-    localStorage.removeItem(`user`);
     this.user = ``;
+    localStorage.removeItem(`user`);
   }
 
   @action
@@ -167,7 +167,10 @@ class Store {
     window.setTimeout(() => {this.infoMessage = ``;}, 5000);
   }
 
-
+  @action
+  togglePopup = () => {
+    this.popup = !this.popup;
+  };
 
   @computed
   get thisWeek() {

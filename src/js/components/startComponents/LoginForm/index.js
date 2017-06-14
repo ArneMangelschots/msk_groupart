@@ -3,14 +3,13 @@ import {observer, inject, PropTypes} from 'mobx-react';
 import {object} from 'prop-types';
 import React from 'react';
 import {withRouter} from 'react-router';
+import {Link} from 'react-router-dom';
 
 const LoginForm = ({store, history}) => {
 
   let $username = ``;
 
   const {handleLogin} = store;
-
-  console.log(`test`);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -50,7 +49,7 @@ const LoginForm = ({store, history}) => {
             value='log mij in'
           />
           <div className='nog-box'>
-            <p>Nog geen account? Registreer dan <a href='/register'>hier</a></p>
+            <p>Nog geen account? Registreer dan <Link to='/home/register'>hier</Link></p>
           </div>
         </form>
       </div>

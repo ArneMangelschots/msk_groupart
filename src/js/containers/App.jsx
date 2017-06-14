@@ -9,26 +9,26 @@ import {Route, Switch, Redirect} from 'react-router-dom';
 import Overview from './Overview';
 import MijnEvents from './MijnEvents';
 import Add from './Add';
-// import Login from './Login';
 import Logout from '../components/Logout';
 import Message from '../components/Message';
 import EventDetail from './EventDetail';
 import Start from './Start';
+import Popup from '../components/Popup';
 
 import SideNav from '../components/SideNav';
 
 const App = ({store}) => {
 
-  const {user, infoMessage} = store;
-
-  console.log(user);
+  const {user, infoMessage, popup} = store;
 
   return (
     <section>
       {process.env.NODE_ENV !== `production` ? <DevTools /> : null}
+      {popup === true &&
+        <Popup />
+      }
       {user.length > 0 &&
         <section className='event-page'>
-
           <header className='banner'>
               <Logout />
           </header>
@@ -55,6 +55,9 @@ const App = ({store}) => {
                 exact path='/event/:id'
                 render={({match}) => <EventDetail match={match} />}
               />
+              <Route
+                render={() => <Redirect to='/ontdek' />}
+              />
             </Switch>
           </section>
         </section>
@@ -62,19 +65,11 @@ const App = ({store}) => {
       {user.length <= 0 &&
         <Switch>
           <Route
-            exact path='/'
-            render={() => <Start page='home' />}
+            exact path='/home/:page'
+            render={({match}) => <Start match={match} />}
           />
           <Route
-            exact path='/register'
-            render={() => <Start page='register' />}
-          />
-          <Route
-            exact path='/login'
-            render={() => <Start page='login' />}
-          />
-          <Route
-            render={() => <Redirect to='/' />}
+            render={() => <Redirect to='/home/info' />}
           />
         </Switch>
       }
