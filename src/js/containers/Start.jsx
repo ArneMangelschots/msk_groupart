@@ -4,14 +4,14 @@ import {string} from 'prop-types';
 
 import StartInfo from '../components/startComponents/StartInfo';
 import Register from '../components/startComponents/Register';
-import Login from '../components/startComponents/loginForm';
+import Login from '../components/startComponents/LoginForm';
 
 const Start = ({page}) => {
   console.log(page);
   return (
     <section className='start'>
       <div className='logo-login'>
-        <div className='logo'></div>
+        <a href='/'><div className='logo'></div></a>
         <Link className='login-a' to='login'><div className='login'>login</div></Link>
       </div>
       {page === `home` &&

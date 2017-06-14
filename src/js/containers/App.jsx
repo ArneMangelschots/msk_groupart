@@ -27,20 +27,20 @@ const App = ({store}) => {
     <section>
       {process.env.NODE_ENV !== `production` ? <DevTools /> : null}
       {user.length > 0 &&
-      <header>
-        <h1>Msk</h1>
-          <Logout />
-      </header>
-      }
-      {infoMessage.length > 0 &&
-        <Message />
-      }
-      {user.length > 0 &&
-        <section className='container'>
+        <section className='event-page'>
+
+          <header className='banner'>
+              <Logout />
+          </header>
+
+          {infoMessage.length > 0 &&
+            <Message />
+          }
+          <section className='main-container'>
             <SideNav />
             <Switch>
               <Route
-                exact path='/home'
+                exact path='/ontdek'
                 component={Overview}
               />
               <Route
@@ -56,6 +56,7 @@ const App = ({store}) => {
                 render={({match}) => <EventDetail match={match} />}
               />
             </Switch>
+          </section>
         </section>
       }
       {user.length <= 0 &&

@@ -10,6 +10,8 @@ const LoginForm = ({store, history}) => {
 
   const {handleLogin} = store;
 
+  console.log(`test`);
+
   const handleSubmit = e => {
     e.preventDefault();
     handleLogin($username.value);
@@ -17,24 +19,42 @@ const LoginForm = ({store, history}) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor='username'>Username</label>
-      <input
-        type='text'
-        id='username'
-        ref={$el => $username = $el}
-      />
-      <label htmlFor='password'>Password</label>
-      <input
-        type='password'
-        id='password'
-      />
-      <input
-        type='submit'
-        id='login'
-        value='inloggen'
-      />
-    </form>
+    <div className='login-box'>
+      <div className='login-content'>
+        <header>
+          <h1>Login</h1>
+        </header>
+
+        <form onSubmit={handleSubmit}>
+          <label htmlFor='username'></label>
+          <input
+            className='login-input'
+            type='text'
+            id='username'
+            ref={$el => $username = $el}
+            placeholder='Gebruikersnaam'
+          />
+          <label htmlFor='password'></label>
+          <input
+            className='login-input'
+            type='password'
+            id='password'
+            placeholder='Wachtwoord'
+          />
+          <div className='pass-box'>
+            <p>Wachtwoord vergeten?</p>
+          </div>
+          <input className='login-button'
+            type='submit'
+            id='login'
+            value='log mij in'
+          />
+          <div className='nog-box'>
+            <p>Nog geen account? Registreer dan <a href='/register'>hier</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
   );
 };
 
