@@ -16,37 +16,43 @@ const EventList = ({store}) => {
       {thisWeek.length > 0 &&
         <div className='this-week'>
           <h2>Deze week</h2>
-          <ul>
+          <table>
+            <tbody>
             {
               thisWeek.map(e => (
                 <Event key={e._id} {...e} nUsers={e.nUsers} />
               ))
             }
-          </ul>
+            </tbody>
+          </table>
         </div>
       }
       {nextWeek.length > 0 &&
         <div className='this-week'>
           <h2>Volgende week</h2>
-          <ul>
+          <table>
+            <tbody>
             {
               nextWeek.map(e => (
                 <Event key={e._id} {...e} nUsers={e.nUsers} />
               ))
             }
-          </ul>
+            </tbody>
+          </table>
         </div>
       }
       {thisMonth.length > 0 &&
         <div className='this-week'>
           <h2>Rest van de maand</h2>
-          <ul>
+          <table>
+            <tbody>
             {
               thisMonth.map(e => (
                 <Event key={e._id} {...e} nUsers={e.nUsers} />
               ))
             }
-          </ul>
+          </tbody>
+          </table>
         </div>
       }
     </div>

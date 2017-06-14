@@ -22,18 +22,40 @@ const Event = ({date, hour, what, nUsers, capacity, store, creator, users, _id})
   };
 
   return (
-    <div className='event'>
-      <Link to={`/event/${_id}`}>{date} | {hour} | {what} | {nUsers}/{capacity}</Link>
+    <li className='event'>
+
+      <div className='datum'>
+        <p className='datumke'>16-07</p>
+        <p>Maandag</p>
+      </div>
+
+      <div className='wat'>
+        <p className='voorstelling'>tentoonstelling</p>
+        <p>Restauratie lam gods</p>
+      </div>
+
+      <div className='tijd'>
+        <div className='klok'></div>
+        <p>14:00</p>
+      </div>
+
+      <div className='personen'>
+        <div className='groep'></div>
+        <p>4/10</p>
+      </div>
+
+      <button className='extra-button'>extra info</button>
+
       {creator === user &&
-        <button onClick={handleRemove}>Remove</button>
+        <button className='remove-button'onClick={handleRemove}>Remove</button>
       }
       {users.includes(user) && creator !== user &&
-        <button onClick={handleLeave}>Leave Event</button>
+        <button className='leave-button' onClick={handleLeave}>Leave Event</button>
       }
       {!users.includes(user) && creator !== user &&
-        <button onClick={handleJoin}>Join</button>
+        <button className='join-button' onClick={handleJoin}>Join</button>
       }
-    </div>
+    </li>
   );
 
 };
