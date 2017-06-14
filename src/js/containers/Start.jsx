@@ -1,34 +1,34 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+import {string} from 'prop-types';
 
-const Start = () => {
+import StartInfo from '../components/startComponents/StartInfo';
+import Register from '../components/startComponents/Register';
+import Login from '../components/startComponents/loginForm';
+
+const Start = ({page}) => {
+  console.log(page);
   return (
     <section className='start'>
-
       <div className='logo-login'>
         <div className='logo'></div>
-        <a className='login-a' href='#'><div className='login'>login</div></a>
+        <Link className='login-a' to='login'><div className='login'>login</div></Link>
       </div>
-
-      <div className='groupart'>
-        <div className='groupart-box'>
-          <h1>Groupart</h1>
-          <p>
-            Maak en join events en ga samen met andere kunstliefhebbers naar het msk.
-            Ontmoet nieuwe mensen en deel jouw passie met hen. Word nu lid van Groupart!
-          </p>
-          <div className='doe-button'>ik doe mee!</div>
-        </div>
-
-        <div className='question-flexbox'>
-          <a className='question-a' href='#'>
-            <div className='question-box'>
-            <div className='question'>?</div>
-            </div>
-          </a>
-        </div>
-      </div>
+      {page === `home` &&
+        <StartInfo />
+      }
+      {page === `register` &&
+        <Register />
+      }
+      {page === `login` &&
+        <Login />
+      }
     </section>
   );
+};
+
+Start.propTypes = {
+  page: string.isRequired
 };
 
 export default Start;
