@@ -9,7 +9,7 @@ import {Route, Switch, Redirect} from 'react-router-dom';
 import Overview from './Overview';
 import MijnEvents from './MijnEvents';
 import Add from './Add';
-import Login from './Login';
+// import Login from './Login';
 import Logout from '../components/Logout';
 import Message from '../components/Message';
 import EventDetail from './EventDetail';
@@ -55,24 +55,25 @@ const App = ({store}) => {
                 exact path='/event/:id'
                 render={({match}) => <EventDetail match={match} />}
               />
-              <Route
-                  render={() => <Redirect to='/home' />}
-              />
             </Switch>
         </section>
       }
-      {user.length < 1 &&
+      {user.length <= 0 &&
         <Switch>
           <Route
-              exact path='/groupart'
-              component={Start}
+            exact path='/'
+            render={() => <Start page='home' />}
+          />
+          <Route
+            exact path='/register'
+            render={() => <Start page='register' />}
           />
           <Route
             exact path='/login'
-            component={Login}
+            render={() => <Start page='login' />}
           />
           <Route
-              render={() => <Redirect to='/groupart' />}
+            render={() => <Redirect to='/' />}
           />
         </Switch>
       }
