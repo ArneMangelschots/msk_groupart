@@ -9,11 +9,34 @@
 
 
 </head>
+<script>
+	WebFontConfig = {
+		custom: {
+			families: [
+        'denmark-bold'
+				'oak-bold'
+			],
+			urls: [
+				'./assets/fonts/fonts.css'
+			]
+		}
+	};
+	(function(d) {
+		var wf = d.createElement('script'), s = d.scripts[0];
+		wf.async = true;
+		//wf.src = 'js/webfontloader.js';
+		s.parentNode.insertBefore(wf, s);
+		wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+			 '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+	})(document);
+	</script>
+
+
 
 <body>
 
 
-  <div class='react-mount'>
+  <div class="react-mount">
 
   </div>
 

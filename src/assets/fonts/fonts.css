@@ -1,0 +1,20 @@
+
+@font-face {
+  font-family: denmarkbold;
+  src:
+    url(denmark-bold.woff2) format('woff2'),
+    url(denmark-bold.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: oakbold;
+  src:
+    url(oak-bold.woff2) format('woff2'),
+    url(oak-bold.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
