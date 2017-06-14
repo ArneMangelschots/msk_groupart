@@ -1,6 +1,6 @@
 @import 'reset';
 
-input:focus {
+input:focus, select:focus {
   outline: none;
 }
 
@@ -10,9 +10,6 @@ body {
   /*margin: 6rem;*/
 }
 
-.info-message {
-  color: green;
-}
 /*/////////////////////////////////////////////////////////
 /////////// STARTPAGE ///////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////*/
@@ -399,14 +396,22 @@ form {
 
   & select {
     font-family: oak-bold;
-    margin-right: 4rem;
+    margin: 2rem 4rem 0 0;
     height: 3rem;
+    border-radius: 10rem;
     border: .3rem solid red;
   }
 }
 
-.this-week {
+.info-message {
+  font-family: oak-bold;
+  color: #50b948;
+  border: .3rem solid #50b948;
+  height: 8rem;
+}
 
+.this-week {
+  width: 100%;
 
   & h2 {
     font-family: denmark-bold;
@@ -416,4 +421,124 @@ form {
     width: 15rem;
     margin-top: 4rem;
   }
+}
+
+.event {
+  margin-top: 5rem;
+  list-style-type: none;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 78vw;
+  padding-bottom: 2rem;
+  border-bottom: .1rem solid black;
+}
+
+.datum, .wat {
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+
+  & .datumke {
+    font-size: 1.3rem;
+    color: black;
+  }
+
+  & p {
+    color: red;
+    font-size: 2rem;
+  }
+}
+
+.wat {
+
+  & .voorstelling {
+    font-size: 1.3rem;
+    color: red;
+  }
+
+  & p {
+    color: black;
+    font-size: 1.7rem;
+  }
+}
+
+.tijd, .personen {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 8rem;
+
+  & .klok {
+    background: url(../assets/svg/clock.svg) no-repeat;
+    height: 2.5rem;
+    width: 3rem;
+  }
+
+  & .groep {
+    background: url(../assets/svg/groep.svg) no-repeat;
+    height: 2.5rem;
+    width: 3rem;
+  }
+}
+
+.extra-button {
+  border: .3rem solid black;
+  background-color: transparent;
+  font-family: oak-bold;
+  cursor: pointer;
+  transition: all .5s ease-out;
+  width: 8rem;
+}
+
+.extra-button:hover {
+  background-color: black;
+  color: white;
+}
+
+.join-button {
+  border: .3rem solid red;
+  background-color: transparent;
+  color: red;
+  font-family: oak-bold;
+  cursor: pointer;
+  width: 8rem;
+  transition: all .5s ease-out;
+}
+
+.join-button:hover {
+  background-color: red;
+  color: white;
+}
+
+.remove-button {
+  background-color: red;
+  border: none;
+  color: white;
+  font-family: oak-bold;
+  cursor: pointer;
+  width: 8rem;
+  transition: all .5s ease-out;
+}
+
+.remove-button:hover {
+  background-color: red;
+  color: white;
+}
+
+.leave-button {
+  background-color: red;
+  border: none;
+  color: white;
+  font-family: oak-bold;
+  cursor: pointer;
+  width: 8rem;
+  transition: all .5s ease-out;
+}
+
+.leave-button:hover {
+  background-color: red;
+  color: white;
 }

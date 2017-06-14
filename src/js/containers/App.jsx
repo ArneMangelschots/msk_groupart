@@ -33,11 +33,12 @@ const App = ({store}) => {
               <Logout />
           </header>
 
-          {infoMessage.length > 0 &&
-            <Message />
-          }
+
           <section className='main-container'>
             <SideNav />
+            {infoMessage.length > 0 &&
+              <Message />
+            }
             <Switch>
               <Route
                 exact path='/ontdek'
