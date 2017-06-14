@@ -9,6 +9,8 @@ const EventList = ({store}) => {
 
   const {thisWeek, nextWeek, thisMonth} = store;
 
+  console.log(`j`);
+
   return (
     <div className='event-list'>
       {thisWeek.length > 0 &&

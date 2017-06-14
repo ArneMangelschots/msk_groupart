@@ -11,8 +11,8 @@ const Logout = ({store}) => {
   };
 
   return (
-    <div>
-      <p>Welcome, {user} <a href='#' onClick={handleClick}>Logout</a></p>
+    <div className='login-welkom'>
+      <p>Welcome, <strong>{user}</strong> <a href='#' onClick={handleClick}> | log uit</a></p>
     </div>
   );
 };
