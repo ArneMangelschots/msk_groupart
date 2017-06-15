@@ -60,6 +60,7 @@ const EventForm = ({store, history}) => {
 
   return (
     <form className='add-form' onSubmit={handleFormSubmit}>
+      <div className='form-section'>
       <label htmlFor='date'>Wanneer gaat je event door?</label>
       <div className='form-rij'>
         <input
@@ -82,23 +83,26 @@ const EventForm = ({store, history}) => {
       </div>
       <label htmlFor='what'>Wat ga je doen?</label>
       <div className='form-rij'>
-      <span>Vrij museumbezoek</span><input
-        className='radiobutton'
-        type='radio'
-        name='what'
-        value='vrij'
-        checked={what === `vrij` ? `checked` : ``}
-        onChange={handleRadioChange}
-      />
-
-      <span>Vrij museumbezoek</span><input
-        className='radiobutton'
-        type='radio'
-        name='what'
-        value='tentoonstelling'
-        checked={what === `tentoonstelling` ? `checked` : ``}
-        onChange={handleRadioChange}
-      />
+      <div className='radio-row'>
+        <span>Vrij museumbezoek</span><input
+          className='radiobutton'
+          type='radio'
+          name='what'
+          value='vrij'
+          checked={what === `vrij` ? `checked` : ``}
+          onChange={handleRadioChange}
+        />
+      </div>
+      <div className='radio-row'>
+        <span>Vrij museumbezoek</span><input
+          className='radiobutton'
+          type='radio'
+          name='what'
+          value='tentoonstelling'
+          checked={what === `tentoonstelling` ? `checked` : ``}
+          onChange={handleRadioChange}
+        />
+      </div>
     </div>
       {what === `tentoonstelling` &&
       <div className='form-collum'>
@@ -112,16 +116,19 @@ const EventForm = ({store, history}) => {
         </select>
       </div>
       }
-
+      </div>
+      <div className='form-section'>
+      <label htmlFor='title'>Geef je event korte beschrijving</label>
       <div className='text-box'>
-        <label htmlFor='title'>Geef je event korte beschrijving</label><br />
         <textarea
           type='text'
           id='title'
+          cols='55'
+          rows='8'
           ref={$el => $title = $el}
         />
       </div>
-
+      <label htmlFor='what'>Hoeveel personen mogen er mee met jou?</label>
       <div className='capacity-box'>
         <label htmlFor='capacity'></label>
         <input className='capacity'
@@ -137,6 +144,7 @@ const EventForm = ({store, history}) => {
         type='submit'
         value='Maak aan'
       />
+      </div>
     </form>
   );
 };

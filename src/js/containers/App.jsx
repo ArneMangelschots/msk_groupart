@@ -15,6 +15,7 @@ import Start from './Start';
 import Popup from '../components/Popup';
 
 import SideNav from '../components/SideNav';
+import Footer from '../components/Footer';
 
 const App = ({store}) => {
 
@@ -68,6 +69,7 @@ const App = ({store}) => {
           />
         </Switch>
       }
+      <Footer />
     </section>
 
   );
