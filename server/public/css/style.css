@@ -524,8 +524,10 @@ body {
 
 .banner {
   background: url(/assets/img/header.jpg) no-repeat center;
+  position: fixed;
   height: 160px;
   height: 10rem;
+  width: 100%;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -538,7 +540,8 @@ body {
           align-items: center;
   padding: 48px;
   padding: 3rem;
-  z-index: 99
+  z-index: 99999
+
 }
 
 
@@ -590,11 +593,14 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 160px;
+  margin-top: 10rem;
   width: 288px;
   width: 18rem;
   box-shadow: .1rem 0 1.5rem silver;
-  height: 87vh;
-  z-index: 99
+  z-index: 99;
+  height: 100%;
+  position: fixed
 }
 
 .sidebar .msk-logo{
@@ -608,6 +614,7 @@ body {
   margin-top: 80px;
   margin-top: 5rem
 
+
 }
 
 .side-links a{
@@ -616,9 +623,37 @@ body {
   font-family: oak-bold;
 }
 
-.side-links .mijn-events{
+.mijn-events {
   margin: 80px 0 320px;
   margin: 5rem 0 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 224px;
+  width: 14rem
+}
+
+.mijn-events .pop-melding{
+  /*background-color: red;*/
+  border: 3.2px solid red;
+  border: .2rem solid red;
+  color: red;
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: oak-bold;
+  text-align: center;
+  padding-top: 3%;
+  height: 32px;
+  height: 2rem;
+  width: 32px;
+  width: 2rem;
 }
 
 .plus {
@@ -637,10 +672,11 @@ body {
 /*/////////// OVERVIEW ////////////////////////*/
 
 .overview, .my-events-list, .add-event {
-  padding: 128px 0 0 7%;
-  padding: 8rem 0 0 7%;
+  padding: 320px 0 0 7%;
+  padding: 20rem 0 0 7%;
   width: 100%;
-  font-family: oak-bold
+  font-family: oak-bold;
+  margin-left: 10%
 }
 
 .overview .event-title, .my-events-list .event-title, .add-event .event-title{
