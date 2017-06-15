@@ -1183,11 +1183,6 @@ label {
   line-height: 2.5rem;
 }
 
-<<<<<<< HEAD
-/*/////////////////////////////////////////////////////////
-/////////// Footer ///////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////*/
-
 footer {
   position: fixed;
   bottom: 0;
@@ -1208,11 +1203,19 @@ footer {
 footer ul{
   -ms-flex-item-align: center;
       align-self: center;
-=======
-
-/*/////////////////////////////////////////////////////////
-/////////// DETAIL PAGINA EVENT ///////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 240px;
+  width: 15rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 
 .back {
   text-decoration: none;
@@ -1281,21 +1284,11 @@ footer ul{
 
 .practical-box {
   background-color: red;
->>>>>>> ed7f42fa353a2aff795d8951d1f29d6b59d5f1fc
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-<<<<<<< HEAD
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 240px;
-  width: 15rem;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-=======
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   -webkit-box-pack: justify;
@@ -1425,7 +1418,6 @@ footer ul{
 .maak-button:hover {
   background-color: red;
   color: white;
->>>>>>> ed7f42fa353a2aff795d8951d1f29d6b59d5f1fc
 }
 
 /*# sourceMappingURL=style.css.map*/
