@@ -1,9 +1,6 @@
 import React from 'react';
-import {observer, inject, PropTypes} from 'mobx-react';
 
-const Popup = ({store}) => {
-
-  const {togglePopup} = store;
+const Popup = () => {
 
   return (
     <div className='popup'>
@@ -15,10 +12,6 @@ const Popup = ({store}) => {
   );
 };
 
-Popup.propTypes = {
-  store: PropTypes.observableObject.isRequired
-};
 
-export default inject(`store`)(
-  observer(Popup)
-);
+
+export default Popup;
