@@ -13,9 +13,11 @@ const SideNav = () => {
       <ul className='side-links'>
         <li className='events'><Link to='/ontdek'>Events</Link></li>
         <li className='mijn-events'><Link to='/mijnEvents'>Mijn events</Link></li>
-        <li className='add-event'>
-          <Link to='/add'>Event maken</Link>
+        <li className='event-aanmaken'>
+          <Link to='/add'>
+          Event maken
           <div className='plus'>+</div>
+        </Link>
         </li>
       </ul>
 

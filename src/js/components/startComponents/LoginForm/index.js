@@ -25,7 +25,7 @@ const LoginForm = ({store, history}) => {
           <h1>Login</h1>
         </header>
 
-        <form onSubmit={handleSubmit}>
+        <form className='login-form' onSubmit={handleSubmit}>
           <label htmlFor='username'></label>
           <input
             className='login-input'

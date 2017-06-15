@@ -59,21 +59,21 @@ const EventForm = ({store, history}) => {
   };
 
   return (
-    <form onSubmit={handleFormSubmit}>
-      <br /><br />
-      <label htmlFor='date'>Datum</label>
+    <form className='add-form' onSubmit={handleFormSubmit}>
+
+      <label htmlFor='date'></label>
       <input
+        className='kalender'
         type='date'
         id='date'
         onChange={handleDateChange}
         ref={$el => $date = $el}
         min={today}
         max={maxDate}
-      /><br /><br />
-      {hoursByDay.length > 2 &&
+      />
       <div className='uur'>
-        <label htmlFor='hour'>Aanvangsuur</label>
-         <select ref={$el => $hour = $el}>
+        <label htmlFor='hour'></label>
+         <select className='select-uur' ref={$el => $hour = $el}>
           {
             hoursByDay.map(h => (
               <option key={h}>{h}</option>
@@ -81,27 +81,28 @@ const EventForm = ({store, history}) => {
           }
         </select>
       </div>
-      }
-      {hoursByDay.length < 2 &&
-      <div className='uur'>
-        <p className='error'>Kies een dag!</p>
-      </div>
-      }<br /><br />
-      <p>Wat ga je doen?</p><br />
+
+      <div className='option-input radio'>
       Vrij museumbezoek<input
+        className='radiobutton'
         type='radio'
         name='what'
         value='vrij'
         checked={what === `vrij` ? `checked` : ``}
         onChange={handleRadioChange}
       />
+      <div className='check'></div>
+
       Tentoonstelling bekijken<input
+        className='radiobutton'
         type='radio'
         name='what'
         value='tentoonstelling'
         checked={what === `tentoonstelling` ? `checked` : ``}
         onChange={handleRadioChange}
-      /><br /><br />
+      />
+      <div className='check'></div>
+      </div>
       {what === `tentoonstelling` &&
       <div className='tentoonstellingen'>
         <label htmlFor='tents'>Kies een tentoonstelling</label>
@@ -113,25 +114,31 @@ const EventForm = ({store, history}) => {
            }
         </select>
       </div>
-      }<br />
-      <label htmlFor='title'>Geef je event korte beschrijving</label><br />
-      <textarea
-        type='text'
-        id='title'
-        ref={$el => $title = $el}
-      />
-      <br /><br />
-      <label htmlFor='capacity'>Hoeveel personen mogen er mee met jou?</label>
-      <input
-        type='number'
-        min='5'
-        max='20'
-        defaultValue='5'
-        ref={$el => $capacity = $el}
-      /><br /><br />
-      <input
+      }
+
+      <div className='text-box'>
+        <label htmlFor='title'>Geef je event korte beschrijving</label><br />
+        <textarea
+          type='text'
+          id='title'
+          ref={$el => $title = $el}
+        />
+      </div>
+
+      <div className='capacity-box'>
+        <label htmlFor='capacity'></label>
+        <input className='capacity'
+          type='number'
+          min='5'
+          max='20'
+          defaultValue='5'
+          ref={$el => $capacity = $el}
+        />
+      </div>
+
+      <input className='add-button'
         type='submit'
-        value='maak het event aan!'
+        value='Maak aan'
       />
     </form>
   );

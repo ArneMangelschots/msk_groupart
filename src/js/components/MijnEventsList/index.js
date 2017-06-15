@@ -13,8 +13,13 @@ const MijnEventsList = ({store}) => {
 
   return (
     <div className='my-events-list'>
+
+      <header className='my-event-title'>
+        <h1>Mijn Events</h1>
+      </header>
+
       {createdEvents.length > 0 &&
-        <div className='this-week'>
+        <div className='aangemaakt'>
           <h2>Aangemaakte Events</h2>
           <ul>
             {
@@ -26,7 +31,7 @@ const MijnEventsList = ({store}) => {
         </div>
       }
       {signedEvents.length > 0 &&
-        <div className='this-week'>
+        <div className='ingeschreven'>
           <h2>Ingeschreven</h2>
           <ul>
             {

@@ -1,6 +1,6 @@
 @import 'reset';
 
-input:focus, select:focus {
+input:focus, select:focus, textarea:focus {
   outline: none;
 }
 
@@ -166,7 +166,7 @@ body {
   color: white;
 }
 
-form {
+.login-form, .register-form {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
@@ -333,7 +333,6 @@ form {
 .main-container {
   display: flex;
   flex-flow: row nowrap;
-  z-index: -1;
 }
 
 
@@ -347,6 +346,7 @@ form {
   width: 18rem;
   box-shadow: .1rem 0 1.5rem silver;
   height: 87vh;
+  z-index: 99;
 
 
   & .msk-logo {
@@ -382,7 +382,7 @@ form {
 
 /*/////////// OVERVIEW ////////////////////////*/
 
-.overview {
+.overview, .my-events-list, .add-event {
   padding: 8rem 0 0 7%;
   width: 100%;
   font-family: oak-bold;
@@ -541,4 +541,173 @@ form {
 .leave-button:hover {
   background-color: red;
   color: white;
+}
+
+.my-event-title {
+  font-size: 5rem;
+}
+
+.aangemaakt, .ingeschreven, .nieuw-event {
+
+  & h2 {
+    font-family: denmark-bold;
+    background-color: black;
+    padding: .5rem;
+    color: white;
+    width: 20rem;
+    margin-top: 4rem;
+  }
+}
+
+/*/////////////////////////////////////////////////////////
+/////////// EVENT AANMAKEN ///////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////*/
+
+
+
+.add-event {
+
+  & .add-event-title {
+    font-size: 5rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
+
+.add-form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 65vw;
+}
+
+.kalender {
+  border-bottom: .3rem solid red;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 25rem;
+
+  &::placeholder {
+    color: red;
+  }
+}
+
+.uur {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & .select-uur {
+    width: 10rem;
+    text-align: center;
+  }
+}
+
+.option-input {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: 3rem;
+}
+
+.check {
+  display: block;
+  border: 5px solid red;
+  height: 25px;
+  width: 25px;
+  top: 30px;
+  left: 20px;
+  z-index: 5;
+  margin-right: 2rem;
+  transition: border .25s linear;
+  cursor: pointer;
+}
+
+.check:hover {
+  border: 5px solid black;
+}
+
+.check::before {
+  display: block;
+  content: '';
+  height: 15px;
+  width: 15px;
+  top: 5px;
+  left: 5px;
+  margin: auto;
+  transition: background .25s linear;
+
+}
+
+input[type=radio] {
+  position: absolute;
+  visibility: hidden;
+}
+
+input[type=radio] .check {
+  display: block;
+  position: absolute;
+  border: 5px solid #AAAAAA;
+  border-radius: 100%;
+  height: 25px;
+  width: 25px;
+  top: 30px;
+  left: 20px;
+  z-index: 5;
+  transition: border .25s linear;
+  -webkit-transition: border .25s linear;
+}
+
+input[type=radio]:checked ~ .check {
+  border: 5px solid red;
+  color: red;
+}
+
+input[type=radio]:checked ~ .check::before {
+  background: white;
+}
+
+.text-box {
+  margin-top: 6rem;
+  display: flex;
+  flex-flow: column nowrap;
+
+  & textarea {
+    border: .3rem solid red;
+  }
+}
+
+.capacity-box {
+
+  & .capacity {
+    width: 7rem;
+    height: 4rem;
+    border: .3rem solid red;
+    text-align: center;
+    padding-left: 1.2rem;
+    font-family: oak-bold;
+    font-size: 1.5rem;
+  }
+
+}
+
+.add-button {
+  border: .3rem solid red;
+  cursor: pointer;
+  transition: all .5s ease-out;
+  color: red;
+  text-decoration: none;
+  background: transparent;
+  font-family: oak-bold;
+  font-size: 1.8rem;
+  height: 5rem;
+  margin-top: 8rem;
+  padding: 0 2rem;
+}
+
+.add-button:hover {
+  background-color: red;
+  color: white;
+
 }
