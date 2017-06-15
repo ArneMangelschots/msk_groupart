@@ -31,7 +31,7 @@ const Event = ({date, hour, what, nUsers, capacity, store, creator, users, _id, 
 
       <div className='wat'>
         {what !== `Vrij museumbezoek` &&
-          <p className='voorstelling'>tentoonstelling</p>
+          <p className='voorstelling'>Tentoonstelling</p>
         }
         <p>{what}</p>
       </div>
