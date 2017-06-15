@@ -2,58 +2,22 @@
 
 import React from 'react';
 import {observer, inject, PropTypes} from 'mobx-react';
-
-import Event from '../Event';
+import ListPart from '../ListPart';
 
 const EventList = ({store}) => {
 
   const {thisWeek, nextWeek, thisMonth} = store;
 
-  console.log(`j`);
-
   return (
     <div className='event-list'>
       {thisWeek.length > 0 &&
-        <div className='this-week'>
-          <h2>Deze week</h2>
-          <table>
-            <tbody>
-            {
-              thisWeek.map(e => (
-                <Event key={e._id} {...e} nUsers={e.nUsers} />
-              ))
-            }
-            </tbody>
-          </table>
-        </div>
+        <ListPart events={thisWeek} title='Deze week' />
       }
       {nextWeek.length > 0 &&
-        <div className='this-week'>
-          <h2>Volgende week</h2>
-          <table>
-            <tbody>
-            {
-              nextWeek.map(e => (
-                <Event key={e._id} {...e} nUsers={e.nUsers} />
-              ))
-            }
-            </tbody>
-          </table>
-        </div>
+        <ListPart events={nextWeek} title='Volgende week' />
       }
       {thisMonth.length > 0 &&
-        <div className='this-week'>
-          <h2>Rest van de maand</h2>
-          <table>
-            <tbody>
-            {
-              thisMonth.map(e => (
-                <Event key={e._id} {...e} nUsers={e.nUsers} />
-              ))
-            }
-          </tbody>
-          </table>
-        </div>
+        <ListPart events={thisMonth} title='Rest van de maand' />
       }
     </div>
   );

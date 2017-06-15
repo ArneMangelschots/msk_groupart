@@ -162,6 +162,15 @@ class Store {
   }
 
   @action
+  filterByTent = tent => {
+    this.events = [];
+    eventsAPI.selectByTent(tent)
+      .then(({events}) => {
+        events.map(e => this._addEvent(e));
+      });
+  }
+
+  @action
   setMessage = content => {
     this.infoMessage = content;
     window.setTimeout(() => {this.infoMessage = ``;}, 5000);

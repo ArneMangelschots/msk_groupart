@@ -4,7 +4,7 @@ import {observer, inject, PropTypes} from 'mobx-react';
 import {string, number, object} from 'prop-types';
 import {Link} from 'react-router-dom';
 
-const Event = ({date, hour, what, nUsers, capacity, store, creator, users, _id}) => {
+const Event = ({date, hour, what, nUsers, capacity, store, creator, users, _id, dag}) => {
 
   const {user, joinEvent, leaveEvent, removeEvent, setMessage} = store;
 
@@ -25,26 +25,28 @@ const Event = ({date, hour, what, nUsers, capacity, store, creator, users, _id})
     <li className='event'>
 
       <div className='datum'>
-        <p className='datumke'>16-07</p>
-        <p>Maandag</p>
+        <p className='datumke'>{date.replace(`2017-`, ``)}</p>
+        <p>{dag}</p>
       </div>
 
       <div className='wat'>
-        <p className='voorstelling'>tentoonstelling</p>
-        <p>Restauratie lam gods</p>
+        {what !== `Vrij museumbezoek` &&
+          <p className='voorstelling'>tentoonstelling</p>
+        }
+        <p>{what}</p>
       </div>
 
       <div className='tijd'>
         <div className='klok'></div>
-        <p>14:00</p>
+        <p>{hour}</p>
       </div>
 
       <div className='personen'>
         <div className='groep'></div>
-        <p>4/10</p>
+        <p>{nUsers}/{capacity}</p>
       </div>
 
-      <button className='extra-button'>extra info</button>
+      <Link to={`/event/${_id}`} className='extra-button'>extra info</Link>
 
       {creator === user &&
         <button className='remove-button'onClick={handleRemove}>Remove</button>
@@ -67,6 +69,7 @@ Event.propTypes = {
   nUsers: number.isRequired,
   capacity: string.isRequired,
   creator: string.isRequired,
+  dag: string.isRequired,
   users: object.isRequired,
   _id: string.isRequired,
   store: PropTypes.observableObject.isRequired

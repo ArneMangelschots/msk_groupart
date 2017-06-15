@@ -1,4 +1,5 @@
 import {computed, observable} from 'mobx';
+import moment from 'moment';
 
 export default class Event {
 
@@ -31,6 +32,12 @@ export default class Event {
   @computed
   get nUsers() {
     return this.users.length;
+  }
+
+  @computed
+  get Day() {
+    const dagen = [`Zondag`, `Maandag`, `Dinsdag`, `Woensdag`, `Donderdag`, `Vrijdag`, `Zaterdag`];
+    return dagen[new Date(this.date).getDay()];
   }
 
 }
