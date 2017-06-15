@@ -14,6 +14,14 @@ body {
 /////////// STARTPAGE ///////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////*/
 
+.start-container {
+  background-image: url(../assets/img/bepart.png);
+  background-position: bottom 5px left -3px;
+  background-repeat: no-repeat;
+  background-size: 4%;
+  top: 0;
+}
+
 .start {
   background: url(../assets/img/background.jpg) no-repeat;
   background-size: cover;
@@ -338,6 +346,10 @@ body {
 .main-container {
   display: flex;
   flex-flow: row nowrap;
+  background-image: url(../assets/img/bepart.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 4%;
 }
 
 
@@ -515,10 +527,13 @@ body {
 }
 
 .info-message {
+  display: flex;
   font-family: oak-bold;
   color: #50b948;
   border: .3rem solid #50b948;
-  height: 8rem;
+  font-size: 1.6rem;
+  padding: 1rem;
+  margin-top: 2rem;
 }
 
 .this-week {

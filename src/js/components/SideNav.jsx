@@ -4,7 +4,11 @@ import {observer, inject, PropTypes} from 'mobx-react';
 
 const SideNav = ({store}) => {
 
-  const {nMyEvents} = store;
+  const {nMyEvents, filterByTent} = store;
+
+  const handleChangePage = () => {
+    filterByTent(`%`);
+  };
 
   return (
     <div className='sidebar'>
@@ -17,7 +21,7 @@ const SideNav = ({store}) => {
       <ul className='side-links'>
         <li className='events'><Link to='/ontdek'>Events</Link></li>
         <li className='mijn-events'>
-          <Link to='/mijnEvents'>Mijn events</Link>
+          <Link to='/mijnEvents' onClick={handleChangePage}>Mijn events</Link>
           <div className='pop-melding'>{nMyEvents}</div>
         </li>
         <li className='event-aanmaken'>

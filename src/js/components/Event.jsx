@@ -10,15 +10,17 @@ const Event = ({date, hour, what, nUsers, capacity, store, creator, users, _id, 
 
   const handleJoin = () =>  {
     joinEvent(_id);
-    setMessage(`Je hebt het event gejoined`);
+    setMessage(`Je bent succesvol ingeschreven!`);
   };
 
   const handleLeave = () => {
     leaveEvent(_id);
+    setMessage(`Je hebt het event verlaten`);
   };
 
   const handleRemove = () => {
     removeEvent(_id);
+    setMessage(`Het event is verwijderd`);
   };
 
   return (

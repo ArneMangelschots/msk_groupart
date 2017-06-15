@@ -13,6 +13,7 @@ import Logout from '../components/Logout';
 import DetailPage from './DetailPage';
 import Start from './Start';
 import Popup from '../components/Popup';
+import MobileNav from '../components/MobileNav';
 
 import SideNav from '../components/SideNav';
 import Footer from '../components/Footer';
@@ -34,6 +35,7 @@ const App = ({store}) => {
           </header>
           <section className='main-container'>
             <SideNav />
+            <MobileNav />
             <Switch>
               <Route
                 exact path='/ontdek'
