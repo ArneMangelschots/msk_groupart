@@ -60,30 +60,29 @@ const EventForm = ({store, history}) => {
 
   return (
     <form className='add-form' onSubmit={handleFormSubmit}>
-
-      <label htmlFor='date'></label>
-      <input
-        className='kalender'
-        type='date'
-        id='date'
-        onChange={handleDateChange}
-        ref={$el => $date = $el}
-        min={today}
-        max={maxDate}
-      />
-      <div className='uur'>
-        <label htmlFor='hour'></label>
-         <select className='select-uur' ref={$el => $hour = $el}>
-          {
-            hoursByDay.map(h => (
-              <option key={h}>{h}</option>
-            ))
-          }
-        </select>
+      <label htmlFor='date'>Wanneer gaat je event door?</label>
+      <div className='form-rij'>
+        <input
+          className='kalender'
+          type='date'
+          id='date'
+          onChange={handleDateChange}
+          ref={$el => $date = $el}
+          min={today}
+          max={maxDate}
+        />
+          <label htmlFor='hour'></label>
+           <select className='select-uur' ref={$el => $hour = $el}>
+            {
+              hoursByDay.map(h => (
+                <option key={h}>{h}</option>
+              ))
+            }
+          </select>
       </div>
-
-      <div className='option-input radio'>
-      Vrij museumbezoek<input
+      <label htmlFor='what'>Wat ga je doen?</label>
+      <div className='form-rij'>
+      <span>Vrij museumbezoek</span><input
         className='radiobutton'
         type='radio'
         name='what'
@@ -91,9 +90,8 @@ const EventForm = ({store, history}) => {
         checked={what === `vrij` ? `checked` : ``}
         onChange={handleRadioChange}
       />
-      <div className='check'></div>
 
-      Tentoonstelling bekijken<input
+      <span>Vrij museumbezoek</span><input
         className='radiobutton'
         type='radio'
         name='what'
@@ -101,12 +99,11 @@ const EventForm = ({store, history}) => {
         checked={what === `tentoonstelling` ? `checked` : ``}
         onChange={handleRadioChange}
       />
-      <div className='check'></div>
-      </div>
+    </div>
       {what === `tentoonstelling` &&
-      <div className='tentoonstellingen'>
+      <div className='form-collum'>
         <label htmlFor='tents'>Kies een tentoonstelling</label>
-         <select ref={$el => $what = $el}>
+         <select className='select-tent' ref={$el => $what = $el}>
            {
              tents.map(t => (
                <option key={t.name}>{t.name}</option>
