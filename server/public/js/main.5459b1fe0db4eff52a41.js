@@ -6232,7 +6232,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var _prodInvariant = __webpack_require__(22);
 
-var ReactCurrentOwner = __webpack_require__(16);
+var ReactCurrentOwner = __webpack_require__(17);
 
 var invariant = __webpack_require__(2);
 var warning = __webpack_require__(3);
@@ -6628,6 +6628,64 @@ module.exports = { debugTool: debugTool };
 
 /***/ }),
 /* 15 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(335);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(336);
+/* unused harmony reexport HashRouter */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(210);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_2__Link__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(337);
+/* unused harmony reexport MemoryRouter */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(338);
+/* unused harmony reexport NavLink */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(339);
+/* unused harmony reexport Prompt */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(340);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_6__Redirect__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(341);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(342);
+/* unused harmony reexport Router */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(343);
+/* unused harmony reexport StaticRouter */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(344);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_10__Switch__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__matchPath__ = __webpack_require__(345);
+/* unused harmony reexport matchPath */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__withRouter__ = __webpack_require__(346);
+/* unused harmony reexport withRouter */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***/ }),
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6884,7 +6942,7 @@ module.exports = ReactUpdates;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6920,7 +6978,7 @@ var ReactCurrentOwner = {
 module.exports = ReactCurrentOwner;
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7192,64 +7250,6 @@ function getPooledWarningPropertyDefinition(propName, getVal) {
   }
 }
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
-
-/***/ }),
-/* 18 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(335);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(336);
-/* unused harmony reexport HashRouter */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(210);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_2__Link__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(337);
-/* unused harmony reexport MemoryRouter */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(338);
-/* unused harmony reexport NavLink */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(339);
-/* unused harmony reexport Prompt */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(340);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_6__Redirect__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(341);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(342);
-/* unused harmony reexport Router */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(343);
-/* unused harmony reexport StaticRouter */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(344);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_10__Switch__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__matchPath__ = __webpack_require__(345);
-/* unused harmony reexport matchPath */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__withRouter__ = __webpack_require__(346);
-/* unused harmony reexport withRouter */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /***/ }),
 /* 19 */
@@ -7604,7 +7604,7 @@ module.exports = PooledClass;
 
 var _assign = __webpack_require__(6);
 
-var ReactCurrentOwner = __webpack_require__(16);
+var ReactCurrentOwner = __webpack_require__(17);
 
 var warning = __webpack_require__(3);
 var canDefineProperty = __webpack_require__(41);
@@ -9036,7 +9036,7 @@ module.exports = ReactInstanceMap;
 
 
 
-var SyntheticEvent = __webpack_require__(17);
+var SyntheticEvent = __webpack_require__(18);
 
 var getEventTarget = __webpack_require__(57);
 
@@ -14833,10 +14833,10 @@ module.exports = ReactErrorUtils;
 
 var _prodInvariant = __webpack_require__(5);
 
-var ReactCurrentOwner = __webpack_require__(16);
+var ReactCurrentOwner = __webpack_require__(17);
 var ReactInstanceMap = __webpack_require__(31);
 var ReactInstrumentation = __webpack_require__(14);
-var ReactUpdates = __webpack_require__(15);
+var ReactUpdates = __webpack_require__(16);
 
 var invariant = __webpack_require__(2);
 var warning = __webpack_require__(3);
@@ -16162,7 +16162,7 @@ module.exports = ReactNoopUpdateQueue;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mobx_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mobx_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_router_dom__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_router_dom__ = __webpack_require__(15);
 var _jsxFileName = '/Users/Nicodemus/Documents/DEVINE/3de-jaar/4de-semester/MAIV/msk/msk/msk_groupart/src/js/components/Event.jsx';
 
 
@@ -28855,7 +28855,7 @@ var _assign = __webpack_require__(6);
 
 var LinkedValueUtils = __webpack_require__(50);
 var ReactDOMComponentTree = __webpack_require__(7);
-var ReactUpdates = __webpack_require__(15);
+var ReactUpdates = __webpack_require__(16);
 
 var warning = __webpack_require__(3);
 
@@ -29328,7 +29328,7 @@ var DOMLazyTree = __webpack_require__(24);
 var DOMProperty = __webpack_require__(19);
 var React = __webpack_require__(26);
 var ReactBrowserEventEmitter = __webpack_require__(36);
-var ReactCurrentOwner = __webpack_require__(16);
+var ReactCurrentOwner = __webpack_require__(17);
 var ReactDOMComponentTree = __webpack_require__(7);
 var ReactDOMContainerInfo = __webpack_require__(280);
 var ReactDOMFeatureFlags = __webpack_require__(282);
@@ -29338,7 +29338,7 @@ var ReactInstrumentation = __webpack_require__(14);
 var ReactMarkupChecksum = __webpack_require__(302);
 var ReactReconciler = __webpack_require__(25);
 var ReactUpdateQueue = __webpack_require__(53);
-var ReactUpdates = __webpack_require__(15);
+var ReactUpdates = __webpack_require__(16);
 
 var emptyObject = __webpack_require__(27);
 var instantiateReactComponent = __webpack_require__(206);
@@ -30389,7 +30389,7 @@ module.exports = setTextContent;
 
 var _prodInvariant = __webpack_require__(5);
 
-var ReactCurrentOwner = __webpack_require__(16);
+var ReactCurrentOwner = __webpack_require__(17);
 var REACT_ELEMENT_TYPE = __webpack_require__(296);
 
 var getIteratorFn = __webpack_require__(330);
@@ -30848,7 +30848,7 @@ module.exports = REACT_ELEMENT_TYPE;
 
 
 
-var ReactCurrentOwner = __webpack_require__(16);
+var ReactCurrentOwner = __webpack_require__(17);
 var ReactComponentTreeHook = __webpack_require__(12);
 var ReactElement = __webpack_require__(21);
 
@@ -31171,7 +31171,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(188);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__containers_App__ = __webpack_require__(231);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_router_dom__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_router_dom__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_mobx_react__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_mobx_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_mobx_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__stores__ = __webpack_require__(239);
@@ -31313,21 +31313,21 @@ var EventForm = function EventForm(_ref) {
     'form',
     { className: 'add-form', onSubmit: handleFormSubmit, __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 63
       }
     },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
       { className: 'form-section', __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 65
         }
       },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'label',
         { htmlFor: 'date', __source: {
             fileName: _jsxFileName,
-            lineNumber: 64
+            lineNumber: 66
           }
         },
         'Wanneer gaat je event door?'
@@ -31336,7 +31336,7 @@ var EventForm = function EventForm(_ref) {
         'div',
         { className: 'form-rij', __source: {
             fileName: _jsxFileName,
-            lineNumber: 65
+            lineNumber: 67
           }
         },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', {
@@ -31351,12 +31351,12 @@ var EventForm = function EventForm(_ref) {
           max: maxDate,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 66
+            lineNumber: 68
           }
         }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('label', { htmlFor: 'hour', __source: {
             fileName: _jsxFileName,
-            lineNumber: 75
+            lineNumber: 77
           }
         }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -31365,7 +31365,7 @@ var EventForm = function EventForm(_ref) {
               return $hour = $el;
             }, __source: {
               fileName: _jsxFileName,
-              lineNumber: 76
+              lineNumber: 78
             }
           },
           hoursByDay.map(function (h) {
@@ -31373,7 +31373,7 @@ var EventForm = function EventForm(_ref) {
               'option',
               { key: h, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 79
+                  lineNumber: 81
                 }
               },
               h
@@ -31385,7 +31385,7 @@ var EventForm = function EventForm(_ref) {
         'label',
         { htmlFor: 'what', __source: {
             fileName: _jsxFileName,
-            lineNumber: 84
+            lineNumber: 86
           }
         },
         'Wat ga je doen?'
@@ -31394,14 +31394,14 @@ var EventForm = function EventForm(_ref) {
         'div',
         { className: 'form-rij', __source: {
             fileName: _jsxFileName,
-            lineNumber: 85
+            lineNumber: 87
           }
         },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
           { className: 'radio-row', __source: {
               fileName: _jsxFileName,
-              lineNumber: 86
+              lineNumber: 88
             }
           },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -31409,7 +31409,7 @@ var EventForm = function EventForm(_ref) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 87
+                lineNumber: 89
               }
             },
             'Vrij museumbezoek'
@@ -31423,7 +31423,7 @@ var EventForm = function EventForm(_ref) {
             onChange: handleRadioChange,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 87
+              lineNumber: 89
             }
           })
         ),
@@ -31431,7 +31431,7 @@ var EventForm = function EventForm(_ref) {
           'div',
           { className: 'radio-row', __source: {
               fileName: _jsxFileName,
-              lineNumber: 96
+              lineNumber: 98
             }
           },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -31439,7 +31439,7 @@ var EventForm = function EventForm(_ref) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 97
+                lineNumber: 99
               }
             },
             'Vrij museumbezoek'
@@ -31453,7 +31453,7 @@ var EventForm = function EventForm(_ref) {
             onChange: handleRadioChange,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 97
+              lineNumber: 99
             }
           })
         )
@@ -31462,14 +31462,14 @@ var EventForm = function EventForm(_ref) {
         'div',
         { className: 'form-collum', __source: {
             fileName: _jsxFileName,
-            lineNumber: 108
+            lineNumber: 110
           }
         },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'label',
           { htmlFor: 'tents', __source: {
               fileName: _jsxFileName,
-              lineNumber: 109
+              lineNumber: 111
             }
           },
           'Kies een tentoonstelling'
@@ -31480,7 +31480,7 @@ var EventForm = function EventForm(_ref) {
               return $what = $el;
             }, __source: {
               fileName: _jsxFileName,
-              lineNumber: 110
+              lineNumber: 112
             }
           },
           tents.map(function (t) {
@@ -31488,7 +31488,7 @@ var EventForm = function EventForm(_ref) {
               'option',
               { key: t.name, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 113
+                  lineNumber: 115
                 }
               },
               t.name
@@ -31501,14 +31501,14 @@ var EventForm = function EventForm(_ref) {
       'div',
       { className: 'form-section', __source: {
           fileName: _jsxFileName,
-          lineNumber: 120
+          lineNumber: 122
         }
       },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'label',
         { htmlFor: 'title', __source: {
             fileName: _jsxFileName,
-            lineNumber: 121
+            lineNumber: 123
           }
         },
         'Geef je event korte beschrijving'
@@ -31517,7 +31517,7 @@ var EventForm = function EventForm(_ref) {
         'div',
         { className: 'text-box', __source: {
             fileName: _jsxFileName,
-            lineNumber: 122
+            lineNumber: 124
           }
         },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('textarea', {
@@ -31530,7 +31530,7 @@ var EventForm = function EventForm(_ref) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 123
+            lineNumber: 125
           }
         })
       ),
@@ -31538,7 +31538,7 @@ var EventForm = function EventForm(_ref) {
         'label',
         { htmlFor: 'what', __source: {
             fileName: _jsxFileName,
-            lineNumber: 131
+            lineNumber: 133
           }
         },
         'Hoeveel personen mogen er mee met jou?'
@@ -31547,12 +31547,12 @@ var EventForm = function EventForm(_ref) {
         'div',
         { className: 'capacity-box', __source: {
             fileName: _jsxFileName,
-            lineNumber: 132
+            lineNumber: 134
           }
         },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('label', { htmlFor: 'capacity', __source: {
             fileName: _jsxFileName,
-            lineNumber: 133
+            lineNumber: 135
           }
         }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'capacity',
@@ -31565,7 +31565,7 @@ var EventForm = function EventForm(_ref) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 134
+            lineNumber: 136
           }
         })
       ),
@@ -31574,7 +31574,7 @@ var EventForm = function EventForm(_ref) {
         value: 'Maak aan',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 143
+          lineNumber: 145
         }
       })
     )
@@ -31930,10 +31930,12 @@ Message.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mobx_react__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mobx_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mobx_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Event__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_router_dom__ = __webpack_require__(15);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _jsxFileName = '/Users/Nicodemus/Documents/DEVINE/3de-jaar/4de-semester/MAIV/msk/msk/msk_groupart/src/js/components/MijnEventsList/index.js';
 /* eslint-disable react/jsx-filename-extension */
+
 
 
 
@@ -31952,14 +31954,73 @@ var MijnEventsList = function MijnEventsList(_ref) {
     'div',
     { className: 'my-events-list', __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 16
       }
     },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: 'mobile-nav', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18
+        }
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'li',
+        { className: 'events-mobile', __source: {
+            fileName: _jsxFileName,
+            lineNumber: 19
+          }
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_3_react_router_dom__["e" /* Link */],
+          { to: '/ontdek', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 19
+            }
+          },
+          'Events'
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'li',
+        { className: 'mijn-events-mobile', __source: {
+            fileName: _jsxFileName,
+            lineNumber: 20
+          }
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_3_react_router_dom__["e" /* Link */],
+          { to: '/mijnEvents', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 21
+            }
+          },
+          'Mijn events'
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'li',
+        { className: 'event-aanmaken-mobile', __source: {
+            fileName: _jsxFileName,
+            lineNumber: 24
+          }
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_3_react_router_dom__["e" /* Link */],
+          { to: '/add', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 25
+            }
+          },
+          'Maak event'
+        )
+      )
+    ),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'header',
       { className: 'my-event-title', __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 29
         }
       },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -31967,7 +32028,7 @@ var MijnEventsList = function MijnEventsList(_ref) {
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 18
+            lineNumber: 30
           }
         },
         'Mijn Events'
@@ -31976,40 +32037,6 @@ var MijnEventsList = function MijnEventsList(_ref) {
     createdEvents.length > 0 && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
       { className: 'aangemaakt', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 22
-        }
-      },
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'h2',
-        {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 23
-          }
-        },
-        'Aangemaakte Events'
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'ul',
-        {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 24
-          }
-        },
-        createdEvents.map(function (e) {
-          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Event__["a" /* default */], _extends({ key: e._id }, e, { nUsers: e.nUsers, __source: {
-              fileName: _jsxFileName,
-              lineNumber: 27
-            }
-          }));
-        })
-      )
-    ),
-    signedEvents.length > 0 && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      'div',
-      { className: 'ingeschreven', __source: {
           fileName: _jsxFileName,
           lineNumber: 34
         }
@@ -32022,7 +32049,7 @@ var MijnEventsList = function MijnEventsList(_ref) {
             lineNumber: 35
           }
         },
-        'Ingeschreven'
+        'Aangemaakte Events'
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'ul',
@@ -32032,10 +32059,44 @@ var MijnEventsList = function MijnEventsList(_ref) {
             lineNumber: 36
           }
         },
-        signedEvents.map(function (e) {
+        createdEvents.map(function (e) {
           return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Event__["a" /* default */], _extends({ key: e._id }, e, { nUsers: e.nUsers, __source: {
               fileName: _jsxFileName,
               lineNumber: 39
+            }
+          }));
+        })
+      )
+    ),
+    signedEvents.length > 0 && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: 'ingeschreven', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 46
+        }
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h2',
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 47
+          }
+        },
+        'Ingeschreven'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'ul',
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 48
+          }
+        },
+        signedEvents.map(function (e) {
+          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Event__["a" /* default */], _extends({ key: e._id }, e, { nUsers: e.nUsers, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 51
             }
           }));
         })
@@ -32111,7 +32172,7 @@ Popup.displayName = 'Popup';
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(15);
 var _jsxFileName = '/Users/Nicodemus/Documents/DEVINE/3de-jaar/4de-semester/MAIV/msk/msk/msk_groupart/src/js/components/SideNav.jsx';
 
 
@@ -32240,7 +32301,7 @@ SideNav.displayName = 'SideNav';
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_router__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_router_dom__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_router_dom__ = __webpack_require__(15);
 var _jsxFileName = '/Users/Nicodemus/Documents/DEVINE/3de-jaar/4de-semester/MAIV/msk/msk/msk_groupart/src/js/components/startComponents/LoginForm/index.js';
 /* eslint-disable react/jsx-filename-extension */
 
@@ -32415,7 +32476,7 @@ LoginForm.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_router_dom__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_router_dom__ = __webpack_require__(15);
 var _jsxFileName = '/Users/Nicodemus/Documents/DEVINE/3de-jaar/4de-semester/MAIV/msk/msk/msk_groupart/src/js/components/startComponents/Register.jsx';
 
 
@@ -32596,7 +32657,7 @@ Register.propTypes = {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_mobx_react__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_mobx_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_mobx_react__);
 var _jsxFileName = '/Users/Nicodemus/Documents/DEVINE/3de-jaar/4de-semester/MAIV/msk/msk/msk_groupart/src/js/components/startComponents/StartInfo.jsx';
@@ -32705,7 +32766,9 @@ StartInfo.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_EventForm___ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router_dom__ = __webpack_require__(15);
 var _jsxFileName = '/Users/Nicodemus/Documents/DEVINE/3de-jaar/4de-semester/MAIV/msk/msk/msk_groupart/src/js/containers/Add.jsx';
+
 
 
 
@@ -32715,14 +32778,73 @@ var Add = function Add() {
     'div',
     { className: 'add-event', __source: {
         fileName: _jsxFileName,
-        lineNumber: 7
+        lineNumber: 8
       }
     },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: 'mobile-nav', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10
+        }
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'li',
+        { className: 'events-mobile', __source: {
+            fileName: _jsxFileName,
+            lineNumber: 11
+          }
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["e" /* Link */],
+          { to: '/ontdek', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 11
+            }
+          },
+          'Events'
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'li',
+        { className: 'mijn-events-mobile', __source: {
+            fileName: _jsxFileName,
+            lineNumber: 12
+          }
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["e" /* Link */],
+          { to: '/mijnEvents', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 13
+            }
+          },
+          'Mijn events'
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'li',
+        { className: 'event-aanmaken-mobile', __source: {
+            fileName: _jsxFileName,
+            lineNumber: 16
+          }
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["e" /* Link */],
+          { to: '/add', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 17
+            }
+          },
+          'Maak event'
+        )
+      )
+    ),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'header',
       { className: 'add-event-title', __source: {
           fileName: _jsxFileName,
-          lineNumber: 8
+          lineNumber: 21
         }
       },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -32730,7 +32852,7 @@ var Add = function Add() {
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 9
+            lineNumber: 22
           }
         },
         'Event aanmaken'
@@ -32740,7 +32862,7 @@ var Add = function Add() {
       'div',
       { className: 'nieuw-event', __source: {
           fileName: _jsxFileName,
-          lineNumber: 11
+          lineNumber: 24
         }
       },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -32748,7 +32870,7 @@ var Add = function Add() {
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 12
+            lineNumber: 25
           }
         },
         'Nieuw event'
@@ -32757,7 +32879,7 @@ var Add = function Add() {
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__components_EventForm___["a" /* default */], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 14
+        lineNumber: 27
       }
     })
   );
@@ -32776,7 +32898,7 @@ Add.displayName = 'Add';
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mobx_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mobx_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_mobx_react_devtools__ = __webpack_require__(259);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_mobx_react_devtools___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_mobx_react_devtools__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_router_dom__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_router_dom__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Overview__ = __webpack_require__(234);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__MijnEvents__ = __webpack_require__(233);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Add__ = __webpack_require__(230);
@@ -33264,7 +33386,7 @@ MijnEvents.displayName = 'MijnEvents';
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mobx_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mobx_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_EventList__ = __webpack_require__(219);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Message__ = __webpack_require__(223);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_router_dom__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_router_dom__ = __webpack_require__(15);
 var _jsxFileName = '/Users/Nicodemus/Documents/DEVINE/3de-jaar/4de-semester/MAIV/msk/msk/msk_groupart/src/js/containers/Overview.jsx';
 
 
@@ -33345,7 +33467,7 @@ var Overview = function Overview(_ref) {
               lineNumber: 27
             }
           },
-          'maak event'
+          'Maak event'
         )
       )
     ),
@@ -33463,7 +33585,7 @@ Overview.propTypes = {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_startComponents_StartInfo__ = __webpack_require__(229);
@@ -37376,8 +37498,8 @@ var EventPluginHub = __webpack_require__(29);
 var EventPropagators = __webpack_require__(30);
 var ExecutionEnvironment = __webpack_require__(9);
 var ReactDOMComponentTree = __webpack_require__(7);
-var ReactUpdates = __webpack_require__(15);
-var SyntheticEvent = __webpack_require__(17);
+var ReactUpdates = __webpack_require__(16);
+var SyntheticEvent = __webpack_require__(18);
 
 var getEventTarget = __webpack_require__(57);
 var isEventSupported = __webpack_require__(58);
@@ -38454,7 +38576,7 @@ var _prodInvariant = __webpack_require__(5),
 
 var React = __webpack_require__(26);
 var ReactComponentEnvironment = __webpack_require__(51);
-var ReactCurrentOwner = __webpack_require__(16);
+var ReactCurrentOwner = __webpack_require__(17);
 var ReactErrorUtils = __webpack_require__(52);
 var ReactInstanceMap = __webpack_require__(31);
 var ReactInstrumentation = __webpack_require__(14);
@@ -39363,7 +39485,7 @@ var ReactDOMComponentTree = __webpack_require__(7);
 var ReactDefaultInjection = __webpack_require__(295);
 var ReactMount = __webpack_require__(198);
 var ReactReconciler = __webpack_require__(25);
-var ReactUpdates = __webpack_require__(15);
+var ReactUpdates = __webpack_require__(16);
 var ReactVersion = __webpack_require__(310);
 
 var findDOMNode = __webpack_require__(327);
@@ -40654,7 +40776,7 @@ var _prodInvariant = __webpack_require__(5),
 var DOMPropertyOperations = __webpack_require__(191);
 var LinkedValueUtils = __webpack_require__(50);
 var ReactDOMComponentTree = __webpack_require__(7);
-var ReactUpdates = __webpack_require__(15);
+var ReactUpdates = __webpack_require__(16);
 
 var invariant = __webpack_require__(2);
 var warning = __webpack_require__(3);
@@ -41608,7 +41730,7 @@ var _prodInvariant = __webpack_require__(5),
 
 var LinkedValueUtils = __webpack_require__(50);
 var ReactDOMComponentTree = __webpack_require__(7);
-var ReactUpdates = __webpack_require__(15);
+var ReactUpdates = __webpack_require__(16);
 
 var invariant = __webpack_require__(2);
 var warning = __webpack_require__(3);
@@ -42396,7 +42518,7 @@ module.exports = ReactDebugTool;
 
 var _assign = __webpack_require__(6);
 
-var ReactUpdates = __webpack_require__(15);
+var ReactUpdates = __webpack_require__(16);
 var Transaction = __webpack_require__(38);
 
 var emptyFunction = __webpack_require__(13);
@@ -42627,7 +42749,7 @@ var EventListener = __webpack_require__(66);
 var ExecutionEnvironment = __webpack_require__(9);
 var PooledClass = __webpack_require__(20);
 var ReactDOMComponentTree = __webpack_require__(7);
-var ReactUpdates = __webpack_require__(15);
+var ReactUpdates = __webpack_require__(16);
 
 var getEventTarget = __webpack_require__(57);
 var getUnboundedScrollPosition = __webpack_require__(247);
@@ -42827,7 +42949,7 @@ var ReactComponentEnvironment = __webpack_require__(51);
 var ReactEmptyComponent = __webpack_require__(194);
 var ReactBrowserEventEmitter = __webpack_require__(36);
 var ReactHostComponent = __webpack_require__(196);
-var ReactUpdates = __webpack_require__(15);
+var ReactUpdates = __webpack_require__(16);
 
 var ReactInjection = {
   Component: ReactComponentEnvironment.injection,
@@ -42963,7 +43085,7 @@ var ReactComponentEnvironment = __webpack_require__(51);
 var ReactInstanceMap = __webpack_require__(31);
 var ReactInstrumentation = __webpack_require__(14);
 
-var ReactCurrentOwner = __webpack_require__(16);
+var ReactCurrentOwner = __webpack_require__(17);
 var ReactReconciler = __webpack_require__(25);
 var ReactChildReconciler = __webpack_require__(275);
 
@@ -44393,7 +44515,7 @@ var EventPropagators = __webpack_require__(30);
 var ExecutionEnvironment = __webpack_require__(9);
 var ReactDOMComponentTree = __webpack_require__(7);
 var ReactInputSelection = __webpack_require__(197);
-var SyntheticEvent = __webpack_require__(17);
+var SyntheticEvent = __webpack_require__(18);
 
 var getActiveElement = __webpack_require__(68);
 var isTextInputElement = __webpack_require__(207);
@@ -44593,7 +44715,7 @@ var EventPropagators = __webpack_require__(30);
 var ReactDOMComponentTree = __webpack_require__(7);
 var SyntheticAnimationEvent = __webpack_require__(314);
 var SyntheticClipboardEvent = __webpack_require__(315);
-var SyntheticEvent = __webpack_require__(17);
+var SyntheticEvent = __webpack_require__(18);
 var SyntheticFocusEvent = __webpack_require__(318);
 var SyntheticKeyboardEvent = __webpack_require__(320);
 var SyntheticMouseEvent = __webpack_require__(37);
@@ -44819,7 +44941,7 @@ module.exports = SimpleEventPlugin;
 
 
 
-var SyntheticEvent = __webpack_require__(17);
+var SyntheticEvent = __webpack_require__(18);
 
 /**
  * @interface Event
@@ -44863,7 +44985,7 @@ module.exports = SyntheticAnimationEvent;
 
 
 
-var SyntheticEvent = __webpack_require__(17);
+var SyntheticEvent = __webpack_require__(18);
 
 /**
  * @interface Event
@@ -44906,7 +45028,7 @@ module.exports = SyntheticClipboardEvent;
 
 
 
-var SyntheticEvent = __webpack_require__(17);
+var SyntheticEvent = __webpack_require__(18);
 
 /**
  * @interface Event
@@ -45029,7 +45151,7 @@ module.exports = SyntheticFocusEvent;
 
 
 
-var SyntheticEvent = __webpack_require__(17);
+var SyntheticEvent = __webpack_require__(18);
 
 /**
  * @interface Event
@@ -45210,7 +45332,7 @@ module.exports = SyntheticTouchEvent;
 
 
 
-var SyntheticEvent = __webpack_require__(17);
+var SyntheticEvent = __webpack_require__(18);
 
 /**
  * @interface Event
@@ -45542,7 +45664,7 @@ module.exports = dangerousStyleValue;
 
 var _prodInvariant = __webpack_require__(5);
 
-var ReactCurrentOwner = __webpack_require__(16);
+var ReactCurrentOwner = __webpack_require__(17);
 var ReactDOMComponentTree = __webpack_require__(7);
 var ReactInstanceMap = __webpack_require__(31);
 
@@ -48454,7 +48576,7 @@ module.exports = onlyChild;
 
 var _prodInvariant = __webpack_require__(22);
 
-var ReactCurrentOwner = __webpack_require__(16);
+var ReactCurrentOwner = __webpack_require__(17);
 var REACT_ELEMENT_TYPE = __webpack_require__(212);
 
 var getIteratorFn = __webpack_require__(215);
@@ -49271,4 +49393,4 @@ module.exports = __webpack_require__(216);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=main.9adeb43fe2f551500f70.js.map
+//# sourceMappingURL=main.5459b1fe0db4eff52a41.js.map

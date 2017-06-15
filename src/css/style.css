@@ -644,6 +644,7 @@ body {
   font-family: oak-bold;
   cursor: pointer;
   width: 8rem;
+  padding: 1rem 0;
   transition: all .5s ease-out;
 }
 
