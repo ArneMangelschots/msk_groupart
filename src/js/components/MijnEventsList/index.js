@@ -2,8 +2,9 @@
 
 import React from 'react';
 import {observer, inject, PropTypes} from 'mobx-react';
+import {Link} from 'react-router-dom';
 
-import Event from '../Event';
+import ListPart from '../ListPart';
 
 const MijnEventsList = ({store}) => {
 
@@ -17,30 +18,14 @@ const MijnEventsList = ({store}) => {
       <header className='my-event-title'>
         <h1>Mijn Events</h1>
       </header>
-
+      {createdEvents.length === 0 && signedEvents.length === 0 &&
+        <div className='no-events'>Geen events gevonden, <Link to='/add'>Maak er eentje aan</Link> of <Link to='/ontdek'>Schrijf je in!</Link> </div>
+      }
       {createdEvents.length > 0 &&
-        <div className='aangemaakt'>
-          <h2>Aangemaakte Events</h2>
-          <ul>
-            {
-              createdEvents.map(e => (
-                <Event key={e._id} {...e} nUsers={e.nUsers} />
-              ))
-            }
-          </ul>
-        </div>
+        <ListPart events={createdEvents} title='Aangemaakte events' />
       }
       {signedEvents.length > 0 &&
-        <div className='ingeschreven'>
-          <h2>Ingeschreven</h2>
-          <ul>
-            {
-              signedEvents.map(e => (
-                <Event key={e._id} {...e} nUsers={e.nUsers} />
-              ))
-            }
-          </ul>
-        </div>
+        <ListPart events={signedEvents} title='Ingeschreven' />
       }
     </div>
   );

@@ -394,6 +394,10 @@ body {
   }
 }
 
+.event-list, .my-events-list {
+  margin-bottom: 15rem;
+}
+
 .event-aanmaken {
 
   & .plus {
@@ -440,6 +444,20 @@ body {
     background-image: url(../assets/svg/arrow.svg);
     background-repeat: no-repeat;
     background-position: right;
+  }
+}
+
+.no-events {
+  margin-top: 3rem;
+
+  & a {
+    text-decoration: none;
+    color: red;
+    transition: .2s;
+
+    &:hover {
+      color: black;
+    }
   }
 }
 
@@ -754,6 +772,10 @@ label {
   display: flex;
   flex-flow: column nowrap;
   margin-bottom: 2rem;
+}
+
+input[type=radio] {
+  margin-right: 2rem;
 }
 
 .popup {

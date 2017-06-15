@@ -10,7 +10,7 @@ import Overview from './Overview';
 import MijnEvents from './MijnEvents';
 import Add from './Add';
 import Logout from '../components/Logout';
-import EventDetail from './EventDetail';
+import DetailPage from './DetailPage';
 import Start from './Start';
 import Popup from '../components/Popup';
 
@@ -48,8 +48,8 @@ const App = ({store}) => {
                 component={Add}
               />
               <Route
-                exact path='/event/:id'
-                render={({match}) => <EventDetail match={match} />}
+                path='/event/:id'
+                render={({match}) => <DetailPage match={match} />}
               />
               <Route
                 render={() => <Redirect to='/ontdek' />}
