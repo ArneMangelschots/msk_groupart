@@ -24,29 +24,41 @@ const Event = ({date, hour, what, nUsers, capacity, store, creator, users, _id, 
   return (
     <li className='event'>
 
-      <div className='datum'>
-        <p className='datumke'>{date.replace(`2017-`, ``)}</p>
-        <p>{dag}</p>
+      <div className='first-part-event'>
+        <div className='datum'>
+          <p className='datumke'>{date.replace(`2017-`, ``)}</p>
+          <p>{dag}</p>
+        </div>
+
+        <div className='wat'>
+          {what !== `Vrij museumbezoek` &&
+            <p className='voorstelling'>Tentoonstelling</p>
+          }
+          <p>{what}</p>
+        </div>
+
+        <div className='tijd'>
+          <div className='klok'></div>
+          <p>{hour}</p>
+        </div>
+
+        <Link to={`/event/${_id}`} className='extra-button invisible'>extra info</Link>
+
+
       </div>
 
-      <div className='wat'>
-        {what !== `Vrij museumbezoek` &&
-          <p className='voorstelling'>Tentoonstelling</p>
-        }
-        <p>{what}</p>
-      </div>
+      <div className='second-part-event'>
+        <div className='personen'>
+          <div className='groep'></div>
+          <p>{nUsers}/{capacity}</p>
+        </div>
 
-      <div className='tijd'>
+
+      <Link to={`/event/${_id}`} className='extra-button'>extra info</Link>
+      <div className='tijd invisible'>
         <div className='klok'></div>
         <p>{hour}</p>
       </div>
-
-      <div className='personen'>
-        <div className='groep'></div>
-        <p>{nUsers}/{capacity}</p>
-      </div>
-
-      <Link to={`/event/${_id}`} className='extra-button'>extra info</Link>
 
       {creator === user &&
         <button className='remove-button'onClick={handleRemove}>Remove</button>
@@ -57,6 +69,7 @@ const Event = ({date, hour, what, nUsers, capacity, store, creator, users, _id, 
       {!users.includes(user) && creator !== user &&
         <button className='join-button' onClick={handleJoin}>Join</button>
       }
+      </div>
     </li>
   );
 

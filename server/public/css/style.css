@@ -73,9 +73,9 @@ body {
 .start {
   background: url(/assets/img/background.jpg) no-repeat;
   background-size: cover;
-  height: 85vh;
-  margin: 96px;
-  margin: 6rem;
+  height: 90vh;
+  margin: 80px 3% 0;
+  margin: 5rem 3% 0;
 }
 
 .logo-login {
@@ -102,8 +102,7 @@ body {
   height: 128px;
   height: 8rem;
   background-size: 90%;
-  margin-left: 64px;
-  margin-left: 4rem;
+  margin-left: 30%;
   position: relative;
   bottom: 48px;
   bottom: 3rem;
@@ -187,6 +186,7 @@ body {
   transition: all .5s ease-out;
   color: white;
   text-decoration: none;
+  text-align: center;
 }
 
 .doe-button:hover {
@@ -197,8 +197,7 @@ body {
 
 .question-flexbox {
   position: relative;
-  top: 96px;
-  top: 6rem;
+  top: 8%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -382,6 +381,7 @@ body {
   margin-top: 32px;
   margin-top: 2rem;
   cursor: pointer;
+  text-align: center;
   transition: all .5s ease-out;
 }
 
@@ -403,6 +403,10 @@ body {
 .nog-box a{
   color: red;
   text-decoration: none;
+}
+
+.register-button {
+  width: 20%;
 }
 
 /*/////////////////////////////////////////////////////////
@@ -511,10 +515,6 @@ body {
   font-family: oak-bold;
   letter-spacing: 1.6px;
   letter-spacing: .1rem;
-}
-
-.register-button {
-  width: 20%;
 }
 
 /*/////////////////////////////////////////////////////////
@@ -682,13 +682,12 @@ body {
 .overview, .my-events-list, .add-event, .detail {
   padding: 320px 0 0 7%;
   padding: 20rem 0 0 7%;
-  width: 100%;
+  width: 80%;
   font-family: oak-bold;
   margin-left: 10%
 }
 
 .overview .event-title, .my-events-list .event-title, .add-event .event-title, .detail .event-title{
-  width: 87%;
   font-size: 80px;
   font-size: 5rem;
   display: -webkit-box;
@@ -721,6 +720,27 @@ body {
   background-position: right;
 }
 
+.first-part-event, .second-part-event {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.second-part-event {
+  width: 45%;
+}
+
 .info-message {
   font-family: oak-bold;
   color: #50b948;
@@ -731,7 +751,6 @@ body {
 }
 
 .this-week {
-  width: 87%
 }
 
 .this-week h2{
@@ -780,8 +799,8 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 320px;
-  width: 20rem
+  width: 224px;
+  width: 14rem
 }
 
 .datum .datumke, .wat .datumke{
@@ -799,7 +818,9 @@ body {
 .wat {
   -webkit-box-align: end;
       -ms-flex-align: end;
-          align-items: flex-end
+          align-items: flex-end;
+  margin-right: 48px;
+  margin-right: 3rem
 }
 
 .wat .voorstelling{
@@ -828,8 +849,8 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 128px;
-  width: 8rem
+  width: 112px;
+  width: 7rem
 }
 
 .tijd .klok, .personen .klok{
@@ -848,15 +869,24 @@ body {
   width: 3rem;
 }
 
-.extra-button {
+.invisible {
+  display: none;
+}
+
+.personen {
+  width: 144px;
+  width: 9rem;
+}
+
+.extra-button, .invisible {
   border: 4.8px solid black;
   border: .3rem solid black;
   background-color: transparent;
   font-family: oak-bold;
   font-size: 19.2px;
   font-size: 1.2rem;
-  padding-top: 11.2px;
-  padding-top: .7rem;
+  padding: 16px 0;
+  padding: 1rem 0;
   cursor: pointer;
   transition: all .5s ease-out;
   width: 128px;
@@ -872,7 +902,7 @@ body {
   color: white;
 }
 
-.join-button {
+.join-button, .invisible {
   border: 4.8px solid red;
   border: .3rem solid red;
   background-color: transparent;
@@ -881,6 +911,8 @@ body {
   cursor: pointer;
   width: 128px;
   width: 8rem;
+  padding: 16px 0;
+  padding: 1rem 0;
   transition: all .5s ease-out;
 }
 
@@ -1193,8 +1225,8 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 88px;
-  height: 5.5rem;
+  height: 112px;
+  height: 7rem;
   background-color: black;
   z-index: 20;
   display: -webkit-box;
@@ -1424,6 +1456,179 @@ footer ul{
 .maak-button:hover {
   background-color: red;
   color: white;
+}
+
+/*/////////////////////////////////////////////////////////
+/////////// MEDIAQUERIES ///////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////*/
+
+@media (max-width: 1200px) {
+
+  .overview {
+    margin-left: 10rem;
+    padding-left: 10rem;
+    width: 90vw;
+  }
+
+}
+
+
+@media (max-width: 1024px) {
+
+  .login-box {
+    width: 50%;
+  }
+
+  .groupart-box {
+    width: 60%
+  }
+
+  .groupart-box h1{
+    font-size: 11vw;
+  }
+
+  .datum, .wat {
+    width: 14vw;
+  }
+
+  .datum {
+    width: 12vw;
+  }
+
+}
+
+@media (max-width: 900px) {
+
+  .register-box {
+    top: 10%;
+  }
+
+  .register-content {
+    width: 90%;
+  }
+
+  .register-inputs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap
+  }
+
+  .register-inputs .register-input{
+    width: 100%;
+    margin: 0;
+  }
+
+  .register-button {
+    width: 80%;
+  }
+
+  .event {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+
+  .first-part-event, .second-part-event {
+    width: 90%;
+  }
+
+  .second-part-event {
+    margin-top: 3rem;
+  }
+
+  .invisible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .extra-button, .join-button {
+    display: none;
+  }
+}
+
+
+
+@media (max-width: 750px) {
+
+  .login-box {
+    width: 100%
+  }
+
+  .login-box .login-content{
+    width: 90%;
+  }
+
+  .login-box .login-button{
+    width: 100%;
+  }
+
+  .login-box .login-input{
+    height: 4rem;
+    font-size: 2vh;
+  }
+
+  .groupart-box {
+    width: 90%;
+  }
+
+  .register-box {
+    width: 100%
+
+  }
+
+  .register-box .register-inputs{
+    width: 100%;
+  }
+
+  .register-box .register-button{
+    width: 100%;
+  }
+
+  .register-box .register-input{
+    height: 4rem;
+    font-size: 2vh;
+  }
+
+}
+
+@media (max-width: 400px) {
+
+  .login-box {
+    top: 0;
+  }
+
+  .groupart {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start
+  }
+
+  .groupart .groupart-box{
+    margin-top: 5rem;
+  }
+
+  .groupart h1{
+    font-size: 13vw;
+  }
+
+  .doe-button {
+    width: 100%;
+  }
+
+  .question-flexbox {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-right: 0;
+  }
+
+  .register-box {
+    top: 0;
+  }
+
 }
 
 /*# sourceMappingURL=style.css.map*/
