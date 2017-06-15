@@ -16,7 +16,7 @@ const Overview = ({store}) => {
   return (
     <div className='overview'>
       <header className='event-title'>
-        <h1>Events</h1>
+        <h1>Alle Events</h1>
         {infoMessage.length > 0 &&
           <Message />
         }
