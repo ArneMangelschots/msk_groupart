@@ -15,9 +15,6 @@ class Store {
   events = []
 
   @observable
-  name = `Doek mee met het MSK`
-
-  @observable
   openingHours = {};
 
   @observable
@@ -34,6 +31,9 @@ class Store {
 
   @observable
   infoMessage = ``;
+
+  @observable
+  popup = false;
 
   constructor() {
     this.init();
@@ -119,8 +119,8 @@ class Store {
 
   @action
   handleLogout = () => {
-    localStorage.removeItem(`user`);
     this.user = ``;
+    localStorage.removeItem(`user`);
   }
 
   @action
@@ -162,12 +162,24 @@ class Store {
   }
 
   @action
+  filterByTent = tent => {
+    this.events = [];
+    eventsAPI.selectByTent(tent)
+      .then(({events}) => {
+        events.map(e => this._addEvent(e));
+      });
+  }
+
+  @action
   setMessage = content => {
     this.infoMessage = content;
     window.setTimeout(() => {this.infoMessage = ``;}, 5000);
   }
 
-
+  @action
+  togglePopup = () => {
+    this.popup = !this.popup;
+  };
 
   @computed
   get thisWeek() {

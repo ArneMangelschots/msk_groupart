@@ -1,20 +1,20 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {string} from 'prop-types';
+import {object} from 'prop-types';
 
 import StartInfo from '../components/startComponents/StartInfo';
 import Register from '../components/startComponents/Register';
 import Login from '../components/startComponents/LoginForm';
 
-const Start = ({page}) => {
-  console.log(page);
+const Start = ({match}) => {
+  const {page} = match.params;
   return (
     <section className='start'>
       <div className='logo-login'>
-        <a href='/'><div className='logo'></div></a>
+        <Link to='/home'><div className='logo'></div></Link>
         <Link className='login-a' to='login'><div className='login'>login</div></Link>
       </div>
-      {page === `home` &&
+      {page === `info` &&
         <StartInfo />
       }
       {page === `register` &&
@@ -28,7 +28,7 @@ const Start = ({page}) => {
 };
 
 Start.propTypes = {
-  page: string.isRequired
+  match: object.isRequired,
 };
 
 export default Start;

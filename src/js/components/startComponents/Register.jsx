@@ -1,6 +1,15 @@
 import React from 'react';
+import {withRouter} from 'react-router';
+import {object} from 'prop-types';
+import {Link} from 'react-router-dom';
 
-const Register = () => {
+const Register = ({history}) => {
+
+  const handleRegisterSubmit = e => {
+    e.preventDefault();
+    history.push(`/home/login`);
+  };
+
   return (
     <div className='register-box'>
       <div className='register-content'>
@@ -8,7 +17,7 @@ const Register = () => {
           <h1>Registeren</h1>
         </header>
 
-        <form onSubmit className='register-form'>
+        <form onSubmit={handleRegisterSubmit} className='register-form'>
           <div className='register-inputs'>
             <label htmlFor='username'></label>
             <input
@@ -46,13 +55,18 @@ const Register = () => {
               value='registreer'
             />
             <div className='nog-box'>
-              <p>Heb je al een account? Dan kan je hier <a href='/login'>inloggen</a> </p>
+              <p>Heb je al een account? Dan kan je hier <Link to='/home/login'>inloggen</Link> </p>
             </div>
 
         </form>
       </div>
     </div>
   );
+
 };
 
-export default Register;
+Register.propTypes = {
+  history: object.isRequired
+};
+
+export default withRouter(Register);

@@ -33,4 +33,10 @@ export default class Event {
     return this.users.length;
   }
 
+  @computed
+  get Day() {
+    const dagen = [`Zondag`, `Maandag`, `Dinsdag`, `Woensdag`, `Donderdag`, `Vrijdag`, `Zaterdag`];
+    return dagen[new Date(this.date).getDay()];
+  }
+
 }

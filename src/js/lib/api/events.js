@@ -36,6 +36,10 @@ export default {
     const method = `DELETE`;
     return fetch(`${url}/${id}`, {method})
     .then(r => r.json());
+  },
+  selectByTent: tent => {
+    return fetch(`${url}?isActive=true&what=${tent}`)
+      .then(r => r.json());
   }
 
 };
