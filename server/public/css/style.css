@@ -726,9 +726,11 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 320px;
+  width: 20rem
 }
 
 .datum .datumke, .wat .datumke{
@@ -797,10 +799,18 @@ body {
   border: .3rem solid black;
   background-color: transparent;
   font-family: oak-bold;
+  font-size: 19.2px;
+  font-size: 1.2rem;
+  padding-top: 11.2px;
+  padding-top: .7rem;
   cursor: pointer;
   transition: all .5s ease-out;
   width: 128px;
   width: 8rem;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+
 }
 
 .extra-button:hover {

@@ -438,7 +438,8 @@ body {
   display: flex;
   justify-content: flex-end;
   flex-flow: column nowrap;
-  align-items: flex-end;
+  align-items: flex-start;
+  width: 20rem;
 
   & .datumke {
     font-size: 1.3rem;
@@ -488,9 +489,15 @@ body {
   border: .3rem solid black;
   background-color: transparent;
   font-family: oak-bold;
+  font-size: 1.2rem;
+  padding-top: .7rem;
   cursor: pointer;
   transition: all .5s ease-out;
   width: 8rem;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+
 }
 
 .extra-button:hover {
