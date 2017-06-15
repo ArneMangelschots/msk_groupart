@@ -4,24 +4,28 @@ import React from 'react';
 import {object, string, number} from 'prop-types';
 import {observer, inject, PropTypes as MobxProp} from 'mobx-react';
 
+import Message from '../Message';
+
 const EventDetail = ({event, dag, nUsers, store, image}) => {
 
   console.log(image);
 
   const {what, date, description, hour, capacity, creator, _id, users} = event;
-  const {user, joinEvent, leaveEvent, removeEvent, setMessage} = store;
+  const {user, joinEvent, leaveEvent, removeEvent, setMessage, infoMessage} = store;
 
   const handleJoin = () =>  {
     joinEvent(_id);
-    setMessage(`Je hebt het event gejoined`);
+    setMessage(`Je bent succesvol ingeschreven!`);
   };
 
   const handleLeave = () => {
     leaveEvent(_id);
+    setMessage(`Je hebt het event verlaten`);
   };
 
   const handleRemove = () => {
     removeEvent(_id);
+    setMessage(`Het event is verwijderd`);
   };
 
   return (
@@ -29,6 +33,9 @@ const EventDetail = ({event, dag, nUsers, store, image}) => {
       <a href='#' className='back'>
         <strong>&#60;</strong> keer terug
       </a>
+      {infoMessage.length > 0 &&
+        <Message />
+      }
       <div className='detail-content'>
         <div className='practical'>
           <div className='datum-box'>
