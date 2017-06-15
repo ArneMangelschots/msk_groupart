@@ -7,6 +7,7 @@ import {withRouter} from 'react-router';
 import PropTypes from 'prop-types';
 
 
+
 import moment from 'moment';
 
 const EventForm = ({store, history}) => {
@@ -60,6 +61,7 @@ const EventForm = ({store, history}) => {
 
   return (
     <form className='add-form' onSubmit={handleFormSubmit}>
+
       <div className='form-section'>
       <label htmlFor='date'>Wanneer gaat je event door?</label>
       <div className='form-rij'>

@@ -635,10 +635,10 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 224px;
-  width: 14rem
+  width: 14rem;
 }
 
-.mijn-events .pop-melding{
+.pop-melding {
   /*background-color: red;*/
   border: 3.2px solid red;
   border: .2rem solid red;
@@ -652,6 +652,7 @@ body {
   height: 2rem;
   width: 32px;
   width: 2rem;
+
 }
 
 .event-aanmaken {
@@ -678,6 +679,70 @@ body {
 }
 
 /*/////////// OVERVIEW ////////////////////////*/
+
+
+.mobile-nav {
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  width: 90%;
+  margin: 16px 48px;
+  margin: 1rem 3rem
+}
+
+
+.mobile-nav .mijn-events-mobile{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+
+.mobile-nav li{
+  width: 33%;
+  border: 4.8px solid black;
+  border: .3rem solid black;
+  text-align: center;
+  padding: 16px;
+  padding: 1rem;
+  cursor: pointer;
+  margin: 16px 0;
+  margin: 1rem 0;
+  transition: all .5s ease-out;
+}
+
+
+.mobile-nav a{
+  text-decoration: none;
+  color: black;
+}
+
+.mobile-nav li:hover {
+  background-color: black;
+}
+
+.mobile-nav li a:hover {
+  color: white;
+}
 
 .overview, .my-events-list, .add-event, .detail {
   padding: 320px 0 0 7%;
@@ -878,7 +943,7 @@ body {
   width: 9rem;
 }
 
-.extra-button, .invisible {
+.extra-button {
   border: 4.8px solid black;
   border: .3rem solid black;
   background-color: transparent;
@@ -894,7 +959,6 @@ body {
   text-decoration: none;
   color: black;
   text-align: center;
-
 }
 
 .extra-button:hover {
@@ -902,7 +966,7 @@ body {
   color: white;
 }
 
-.join-button, .invisible {
+.join-button {
   border: 4.8px solid red;
   border: .3rem solid red;
   background-color: transparent;
@@ -922,13 +986,16 @@ body {
 }
 
 .remove-button {
+  border: 4.8px solid red;
+  border: .3rem solid red;
   background-color: red;
-  border: none;
   color: white;
   font-family: oak-bold;
   cursor: pointer;
   width: 128px;
   width: 8rem;
+  padding: 16px 0;
+  padding: 1rem 0;
   transition: all .5s ease-out;
 }
 
@@ -1030,14 +1097,14 @@ label {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 65vw;
   margin-top: 56px;
-  margin-top: 3.5rem
+  margin-top: 3.5rem;
+  margin-bottom: 30vh
 }
 
 .add-form .form-section{
@@ -1462,13 +1529,23 @@ footer ul{
 /////////// MEDIAQUERIES ///////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////*/
 
+@media (min-width: 1200) {
+
+  .add-form {
+    width: 65vw;
+  }
+}
+
+
 @media (max-width: 1200px) {
 
-  .overview {
+  .overview, .my-events-list, .add-event {
     margin-left: 10rem;
     padding-left: 10rem;
-    width: 90vw;
+    width: 87vw;
   }
+
+
 
 }
 
@@ -1530,6 +1607,10 @@ footer ul{
             flex-flow: column nowrap;
   }
 
+  .event-title select {
+    margin-right: 6rem;
+  }
+
   .first-part-event, .second-part-event {
     width: 90%;
   }
@@ -1538,15 +1619,25 @@ footer ul{
     margin-top: 3rem;
   }
 
+  .tijd, .extra-button {
+    display: none;
+  }
+
   .invisible {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
-  .extra-button, .join-button {
-    display: none;
+  .datum, .wat {
+    width: 12rem;
   }
+
+
+
 }
 
 
@@ -1590,6 +1681,112 @@ footer ul{
   .register-box .register-input{
     height: 4rem;
     font-size: 2vh;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .sidebar {
+    display: none;
+  }
+
+  .overview, .my-events-list, .add-event {
+    margin-left: 0;
+    padding-left: 0;
+    padding-top: 10rem;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center
+  }
+
+  .overview .event-title, .my-events-list .event-title, .add-event .event-title{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 90%;
+  }
+
+  .overview .my-event-title, .my-events-list .my-event-title, .add-event .my-event-title{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 90%;
+  }
+
+  .overview .add-event-title, .my-events-list .add-event-title, .add-event .add-event-title{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 90%;
+  }
+
+  .overview select, .my-events-list select, .add-event select{
+    margin-top: 3rem;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .event-list {
+    width: 90%;
+  }
+
+  .first-part-event, .second-part-event {
+    width: 100%;
+  }
+
+  .mobile-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .aangemaakt, .ingeschreven, .nieuw-event, .add-form {
+    width: 90%;
+  }
+
+  .form-section {
+    width: 100%
+  }
+
+  .form-section .radio-row{
+    width: 44vw;
+  }
+
+  .form-rij {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .add-event select {
+    width: 50%;
+  }
+
+  .add-button {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
 
 }
