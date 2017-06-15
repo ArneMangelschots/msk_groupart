@@ -402,7 +402,13 @@ body {
     padding: .2rem 0 .3rem;
     width: 3rem;
     margin: 1rem auto;
+    transition: all .5s ease-out;
   }
+}
+
+.plus:hover {
+  background-color: black;
+  color: white;
 }
 
 /*/////////// OVERVIEW ////////////////////////*/
@@ -777,6 +783,7 @@ footer {
     width: 15rem;
     justify-content: space-between;
   }
+}
 
 .back {
   text-decoration: none;
