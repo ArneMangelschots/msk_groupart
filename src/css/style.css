@@ -392,25 +392,29 @@ body {
   }
 }
 
-.plus {
-  font-family: oak-bold;
-  text-align: center;
-  border: .2rem solid black;
-  border-radius: 2rem;
-  padding: .2rem 0 .3rem;
-  width: 3rem;
-  margin: 0 auto;
+.event-aanmaken {
+
+  & .plus {
+    font-family: oak-bold;
+    text-align: center;
+    border: .2rem solid black;
+    border-radius: 2rem;
+    padding: .2rem 0 .3rem;
+    width: 3rem;
+    margin: 1rem auto;
+  }
 }
 
 /*/////////// OVERVIEW ////////////////////////*/
 
-.overview, .my-events-list, .add-event {
+.overview, .my-events-list, .add-event, .detail {
   padding: 20rem 0 0 7%;
   width: 100%;
   font-family: oak-bold;
   margin-left: 10%;
 
   & .event-title {
+    width: 87%;
     font-size: 5rem;
     display: flex;
     flex-flow: row wrap;
@@ -440,7 +444,7 @@ body {
 }
 
 .this-week {
-  width: 100%;
+  width: 87%;
 
   & h2 {
     font-family: denmark-bold;
@@ -458,7 +462,6 @@ body {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  width: 78vw;
   padding-bottom: 2rem;
   border-bottom: .1rem solid black;
 }
@@ -482,9 +485,10 @@ body {
 }
 
 .wat {
+  align-items: flex-end;
 
   & .voorstelling {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: red;
   }
 
@@ -755,10 +759,6 @@ label {
   }
 }
 
-/*/////////////////////////////////////////////////////////
-/////////// Footer ///////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////*/
-
 footer {
   position: fixed;
   bottom: 0;
@@ -777,4 +777,130 @@ footer {
     width: 15rem;
     justify-content: space-between;
   }
+
+.back {
+  text-decoration: none;
+  color: black;
+
+  & strong {
+    color: red;
+  }
+}
+
+.detail-content {
+  margin-top: 10rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.practical {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.datum-box {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+
+  & h1 {
+    font-size: 2rem;
+  }
+
+  & h2 {
+    font-size: 5rem;
+    color: red;
+    text-transform: capitalize;
+  }
+}
+
+.practical-box {
+  background-color: red;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  color: white;
+}
+
+.time-box, .group-box {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+
+  & .timer {
+    background: url(../assets/svg/clock-white.svg) no-repeat;
+    height: 3rem;
+    width: 3rem;
+    margin-right: 1rem;
+  }
+
+  & .group-icon {
+    background: url(../assets/svg/people-white.svg) no-repeat;
+    height: 3rem;
+    width: 3rem;
+    margin: 1rem 1rem 0;
+  }
+
+}
+
+.description {
+  margin-left: 7%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
+
+.event-title-box {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+
+  & h1 {
+    color: red;
+    font-size: 2rem;
+  }
+
+  & h2 {
+    font-size: 3rem;
+  }
+}
+
+.description-box {
+  margin-top: 3rem;
+  width: 80%;
+
+  & p {
+    line-height: 2.5rem;
+  }
+}
+
+.maak-button-box {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.maak-button {
+  border: .3rem solid red;
+  font-family: oak-bold;
+  color: red;
+  background: transparent;
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+  position: relative;
+  top: 6rem;
+  transition: all .5s ease-out;
+  cursor: pointer;
+}
+
+.maak-button:hover {
+  background-color: red;
+  color: white;
 }
