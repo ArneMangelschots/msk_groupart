@@ -3,11 +3,12 @@ import {observer, inject, PropTypes} from 'mobx-react';
 
 const Logout = ({store}) => {
 
-  const {user, handleLogout} = store;
+  const {user, handleLogout, filterByTent} = store;
 
   const handleClick = e => {
     e.preventDefault();
     handleLogout();
+    filterByTent(`%`);
   };
 
   return (

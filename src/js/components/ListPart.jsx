@@ -1,12 +1,12 @@
 import React from 'react';
-import {array} from 'prop-types';
+import {array, string} from 'prop-types';
 
 import Event from './Event';
 
-const ListPart = ({events}) => {
+const ListPart = ({events, title}) => {
   return (
     <div className='this-week'>
-      <h2>Deze week</h2>
+      <h2>{title}</h2>
         <ul>
         {
           events.map(e => (
@@ -19,7 +19,8 @@ const ListPart = ({events}) => {
 };
 
 ListPart.propTypes = {
-  events: array.isRequired
+  events: array.isRequired,
+  title: string.isRequired
 };
 
 export default ListPart;

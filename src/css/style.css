@@ -542,3 +542,34 @@ form {
   background-color: red;
   color: white;
 }
+
+.popup {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, .9);
+  top: 0;
+  color: white;
+  font-family: oak-bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  & .popup-info {
+    width: 40%;
+    align-self: center;
+  }
+
+  & h1 {
+    font-size: 5rem;
+    color: white;
+    padding-bottom: 3rem;
+    border-bottom: .2rem solid white;
+    margin-bottom: 3rem;
+  }
+
+  & p {
+    line-height: 2.5rem;
+  }
+}

@@ -1,5 +1,4 @@
 import {computed, observable} from 'mobx';
-import moment from 'moment';
 
 export default class Event {
 

@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import {observer, inject, PropTypes} from 'mobx-react';
 
 const StartInfo = ({store}) => {
-  const {togglePopup} = store;
+  const {togglePopup, popup} = store;
 
   return (
       <div className='groupart'>
@@ -18,7 +18,7 @@ const StartInfo = ({store}) => {
         <div className='question-flexbox'>
           <a onClick={togglePopup} className='question-a'>
             <div className='question-box'>
-            <div className='question'>?</div>
+            <div className='question'>{popup ? `x` : `?`}</div>
             </div>
           </a>
         </div>

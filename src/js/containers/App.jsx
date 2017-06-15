@@ -10,7 +10,6 @@ import Overview from './Overview';
 import MijnEvents from './MijnEvents';
 import Add from './Add';
 import Logout from '../components/Logout';
-import Message from '../components/Message';
 import EventDetail from './EventDetail';
 import Start from './Start';
 import Popup from '../components/Popup';
@@ -19,7 +18,7 @@ import SideNav from '../components/SideNav';
 
 const App = ({store}) => {
 
-  const {user, infoMessage, popup} = store;
+  const {user, popup} = store;
 
   return (
     <section>
@@ -32,13 +31,8 @@ const App = ({store}) => {
           <header className='banner'>
               <Logout />
           </header>
-
-
           <section className='main-container'>
             <SideNav />
-            {infoMessage.length > 0 &&
-              <Message />
-            }
             <Switch>
               <Route
                 exact path='/ontdek'
