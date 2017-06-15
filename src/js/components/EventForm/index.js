@@ -18,7 +18,7 @@ const EventForm = ({store, history}) => {
   let $hour = ``;
   let $capacity = ``;
   let $what = ``;
-  let $title = ``;
+  let $description = ``;
 
   const today = moment().format(`YYYY-MM-DD`);
   const maxDate = moment(today).add(1, `month`).format(`YYYY-MM-DD`);
@@ -45,7 +45,7 @@ const EventForm = ({store, history}) => {
       hour: $hour.value,
       capacity: $capacity.value,
       what: whatValue,
-      title: $title.value
+      description: $description.value
     };
     if (add(data)) {
       console.log(`joe`);
@@ -56,7 +56,7 @@ const EventForm = ({store, history}) => {
     $hour.value = ``;
     $capacity.value = ``;
     setWhat(`vrij`);
-    $title.value = ``;
+    $description.value = ``;
   };
 
   return (
@@ -96,7 +96,7 @@ const EventForm = ({store, history}) => {
         />
       </div>
       <div className='radio-row'>
-        <span>Vrij museumbezoek</span><input
+        <span>Tentoonstelling</span><input
           className='radiobutton'
           type='radio'
           name='what'
@@ -127,7 +127,7 @@ const EventForm = ({store, history}) => {
           id='title'
           cols='55'
           rows='8'
-          ref={$el => $title = $el}
+          ref={$el => $description = $el}
         />
       </div>
       <label htmlFor='what'>Hoeveel personen mogen er mee met jou?</label>

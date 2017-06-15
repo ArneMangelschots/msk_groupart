@@ -184,7 +184,7 @@ class Store {
   @computed
   get thisWeek() {
     const week = moment().add(7, `day`).format(`YYYY-MM-DD`);
-    const thisWeek = this.events.filter(e => e[`date`] <= week);
+    const thisWeek = this.events.filter(e => e[`date`] <= week).filter(e => e.nUsers < e.capacity);
     return thisWeek;
   }
 
@@ -192,13 +192,13 @@ class Store {
   get nextWeek() {
     const week = moment().add(7, `day`).format(`YYYY-MM-DD`);
     const twoWeeks = moment().add(14, `day`).format(`YYYY-MM-DD`);
-    const nextWeek = this.events.filter(e => e[`date`] > week && e[`date`] <= twoWeeks);
+    const nextWeek = this.events.filter(e => e[`date`] > week && e[`date`] <= twoWeeks).filter(e => e.nUsers < e.capacity);
     return nextWeek;
   }
   @computed
   get thisMonth() {
     const twoWeeks = moment().add(14, `day`).format(`YYYY-MM-DD`);
-    const thisMonth = this.events.filter(e => e[`date`] > twoWeeks);
+    const thisMonth = this.events.filter(e => e[`date`] > twoWeeks).filter(e => e.nUsers < e.capacity);
     return thisMonth;
   }
 
@@ -212,6 +212,11 @@ class Store {
   get signedEvents() {
     const signedEvents = this.events.filter(e => e[`users`].includes(this.user) && e[`creator`] !== this.user);
     return signedEvents;
+  }
+
+  @computed
+  get nMyEvents() {
+    return this.createdEvents.length + this.signedEvents.length;
   }
 
 }

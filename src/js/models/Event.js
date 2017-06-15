@@ -39,4 +39,29 @@ export default class Event {
     return dagen[new Date(this.date).getDay()];
   }
 
+  @computed
+  get image() {
+    let image = ``;
+    switch (this.what) {
+    case `Vrij museumbezoek`:
+      image = `vrij`;
+      break;
+    case `Restauratie Lam Gods`:
+      image = `lamgods`;
+      break;
+    case `Metafloristiek`:
+      image = `metafloristics`;
+      break;
+    case `Written Room`:
+      image = `written`;
+      break;
+    case `Manufactories of Caring Space-Time`:
+      image = `manufactories`;
+      break;
+    default:
+      image = `none`;
+    }
+    return image;
+  }
+
 }
