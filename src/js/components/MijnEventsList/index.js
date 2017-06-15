@@ -4,7 +4,12 @@ import React from 'react';
 import {observer, inject, PropTypes} from 'mobx-react';
 import {Link} from 'react-router-dom';
 
+<<<<<<< HEAD
 import ListPart from '../ListPart';
+=======
+import Event from '../Event';
+import {Link} from 'react-router-dom';
+>>>>>>> aafa4ca0700bc08aa85db41e727e58b759108583
 
 const MijnEventsList = ({store}) => {
 
@@ -14,6 +19,17 @@ const MijnEventsList = ({store}) => {
 
   return (
     <div className='my-events-list'>
+
+      <div className='mobile-nav'>
+        <li className='events-mobile'><Link to='/ontdek'>Events</Link></li>
+        <li className='mijn-events-mobile'>
+          <Link to='/mijnEvents'>Mijn events</Link>
+          {/* <div className='pop-melding'>3</div> */}
+        </li>
+        <li className='event-aanmaken-mobile'>
+          <Link to='/add'>Maak event</Link>
+        </li>
+      </div>
 
       <header className='my-event-title'>
         <h1>Mijn Events</h1>

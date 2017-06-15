@@ -379,19 +379,19 @@ body {
   flex-flow: row nowrap;
   justify-content: space-between;
   width: 14rem;
+}
 
-  & .pop-melding {
-    /*background-color: red;*/
-    border: .2rem solid red;
-    color: red;
-    font-size: 1rem;
-    font-family: oak-bold;
-    text-align: center;
-    padding-top: 3%;
-    height: 2rem;
-    width: 2rem;
+.pop-melding {
+  /*background-color: red;*/
+  border: .2rem solid red;
+  color: red;
+  font-size: 1rem;
+  font-family: oak-bold;
+  text-align: center;
+  padding-top: 3%;
+  height: 2rem;
+  width: 2rem;
 
-  }
 }
 
 .event-list, .my-events-list {
@@ -418,6 +418,47 @@ body {
 }
 
 /*/////////// OVERVIEW ////////////////////////*/
+
+
+.mobile-nav {
+  display: none;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  width: 90%;
+  margin: 1rem 3rem;
+
+  & .mijn-events-mobile {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & li {
+    width: 33%;
+    border: .3rem solid black;
+    text-align: center;
+    padding: 1rem;
+    cursor: pointer;
+    margin: 1rem 0;
+    transition: all .5s ease-out;
+  }
+
+  & a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.mobile-nav li:hover {
+  background-color: black;
+}
+
+.mobile-nav li a:hover {
+  color: white;
+}
 
 .overview, .my-events-list, .add-event, .detail {
   padding: 20rem 0 0 7%;
@@ -563,7 +604,7 @@ body {
   width: 9rem;
 }
 
-.extra-button, .invisible {
+.extra-button {
   border: .3rem solid black;
   background-color: transparent;
   font-family: oak-bold;
@@ -575,7 +616,6 @@ body {
   text-decoration: none;
   color: black;
   text-align: center;
-
 }
 
 .extra-button:hover {
@@ -583,7 +623,7 @@ body {
   color: white;
 }
 
-.join-button, .invisible {
+.join-button {
   border: .3rem solid red;
   background-color: transparent;
   color: red;
@@ -600,12 +640,13 @@ body {
 }
 
 .remove-button {
+  border: .3rem solid red;
   background-color: red;
-  border: none;
   color: white;
   font-family: oak-bold;
   cursor: pointer;
   width: 8rem;
+  padding: 1rem 0;
   transition: all .5s ease-out;
 }
 
@@ -682,10 +723,10 @@ label {
 
 .add-form {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-between;
-  width: 65vw;
   margin-top: 3.5rem;
+  margin-bottom: 30vh;
 
   & .form-section {
     display: flex;
@@ -960,13 +1001,23 @@ footer {
 /////////// MEDIAQUERIES ///////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////*/
 
+@media (width >= 1200) {
+
+  .add-form {
+    width: 65vw;
+  }
+}
+
+
 @media (width <= 1200px) {
 
-  .overview {
+  .overview, .my-events-list, .add-event {
     margin-left: 10rem;
     padding-left: 10rem;
-    width: 90vw;
+    width: 87vw;
   }
+
+
 
 }
 
@@ -1022,6 +1073,10 @@ footer {
     flex-flow: column nowrap;
   }
 
+  .event-title select {
+    margin-right: 6rem;
+  }
+
   .first-part-event, .second-part-event {
     width: 90%;
   }
@@ -1030,13 +1085,21 @@ footer {
     margin-top: 3rem;
   }
 
-  .invisible {
-    display: flex;
-  }
-
-  .extra-button, .join-button {
+  .tijd, .extra-button {
     display: none;
   }
+
+  .invisible {
+    display: flex;
+    justify-content: center;
+  }
+
+  .datum, .wat {
+    width: 12rem;
+  }
+
+
+
 }
 
 
@@ -1080,6 +1143,85 @@ footer {
       font-size: 2vh;
     }
 
+  }
+
+}
+
+
+@media (width <= 600px) {
+
+  .sidebar {
+    display: none;
+  }
+
+  .overview, .my-events-list, .add-event {
+    margin-left: 0;
+    padding-left: 0;
+    padding-top: 10rem;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    & .event-title {
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      width: 90%;
+    }
+
+    & .my-event-title {
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      width: 90%;
+    }
+
+    & .add-event-title {
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      width: 90%;
+    }
+
+    & select {
+      margin-top: 3rem;
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  .event-list {
+    width: 90%;
+  }
+
+  .first-part-event, .second-part-event {
+    width: 100%;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+
+  .aangemaakt, .ingeschreven, .nieuw-event, .add-form {
+    width: 90%;
+  }
+
+  .form-section {
+    width: 100%;
+
+    & .radio-row {
+      width: 44vw;
+    }
+  }
+
+  .form-rij {
+    justify-content: space-between;
+  }
+
+  .add-event select {
+    width: 50%;
+  }
+
+  .add-button {
+    align-self: flex-start;
   }
 
 }

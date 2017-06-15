@@ -29,6 +29,8 @@ const SideNav = ({store}) => {
       </ul>
 
     </div>
+
+
   );
 };
 

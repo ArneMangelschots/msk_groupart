@@ -55,6 +55,7 @@ const Event = ({date, hour, what, nUsers, capacity, store, creator, users, _id, 
 
 
       <Link to={`/event/${_id}`} className='extra-button'>extra info</Link>
+
       <div className='tijd invisible'>
         <div className='klok'></div>
         <p>{hour}</p>
@@ -67,7 +68,7 @@ const Event = ({date, hour, what, nUsers, capacity, store, creator, users, _id, 
         <button className='leave-button' onClick={handleLeave}>Leave Event</button>
       }
       {!users.includes(user) && creator !== user &&
-        <button className='join-button' onClick={handleJoin}>Join</button>
+        <button className='join-button' onClick={handleJoin}>Schrijf in</button>
       }
       </div>
     </li>
