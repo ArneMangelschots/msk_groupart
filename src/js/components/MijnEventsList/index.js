@@ -3,13 +3,8 @@
 import React from 'react';
 import {observer, inject, PropTypes} from 'mobx-react';
 import {Link} from 'react-router-dom';
-
-<<<<<<< HEAD
 import ListPart from '../ListPart';
-=======
-import Event from '../Event';
-import {Link} from 'react-router-dom';
->>>>>>> aafa4ca0700bc08aa85db41e727e58b759108583
+
 
 const MijnEventsList = ({store}) => {
 

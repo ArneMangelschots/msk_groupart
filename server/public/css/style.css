@@ -55,7 +55,7 @@ html {
 *, *::before, *::after { /* stylelint-disable-line */
   box-sizing: inherit;
 }
-input:focus, select:focus, textarea:focus {
+input:focus, select:focus, textarea:focus, button:focus {
   outline: none;
 }
 
@@ -1026,7 +1026,8 @@ body {
 
 .leave-button {
   background-color: red;
-  border: none;
+  border: 4.8px solid red;
+  border: .3rem solid red;
   color: white;
   font-family: oak-bold;
   cursor: pointer;
@@ -1066,12 +1067,8 @@ body {
 /////////// EVENT AANMAKEN ///////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////*/
 
-
-
 .add-event {
 }
-
-
 
 .add-event .add-event-title{
   font-size: 80px;
@@ -1359,8 +1356,10 @@ footer ul{
 }
 
 .detail-content {
-  margin-top: 160px;
-  margin-top: 10rem;
+  margin-top: 80px;
+  margin-top: 5rem;
+  margin-left: 80px;
+  margin-left: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1399,7 +1398,9 @@ footer ul{
           flex-flow: column nowrap;
   -webkit-box-align: end;
       -ms-flex-align: end;
-          align-items: flex-end
+          align-items: flex-end;
+  margin-bottom: 32px;
+  margin-bottom: 2rem
 }
 
 .datum-box h1{
@@ -1470,6 +1471,8 @@ footer ul{
 
 .description {
   margin-left: 7%;
+  margin-top: 112px;
+  margin-top: 7rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1509,7 +1512,18 @@ footer ul{
 .description-box {
   margin-top: 48px;
   margin-top: 3rem;
-  width: 80%
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  height: 20vh
 }
 
 .description-box p{
@@ -1566,16 +1580,13 @@ footer ul{
 
 @media (max-width: 1200px) {
 
-  .overview, .my-events-list, .add-event {
+  .overview, .my-events-list, .add-event, .detail {
     margin-left: 10rem;
     padding-left: 10rem;
     width: 87vw;
   }
 
-
-
 }
-
 
 @media (max-width: 1024px) {
 
@@ -1597,6 +1608,21 @@ footer ul{
 
   .datum {
     width: 12vw;
+  }
+
+  .detail-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    margin-bottom: 15vh;
+    margin-left: 0;
+  }
+
+  .practical {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
 
 }
@@ -1719,7 +1745,7 @@ footer ul{
     display: none;
   }
 
-  .overview, .my-events-list, .add-event {
+  .overview, .my-events-list, .add-event, .detail {
     margin-left: 0;
     padding-left: 0;
     padding-top: 10rem;
@@ -1736,7 +1762,7 @@ footer ul{
             align-items: center
   }
 
-  .overview .event-title, .my-events-list .event-title, .add-event .event-title{
+  .overview .event-title, .my-events-list .event-title, .add-event .event-title, .detail .event-title{
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
@@ -1747,7 +1773,7 @@ footer ul{
     width: 90%;
   }
 
-  .overview .my-event-title, .my-events-list .my-event-title, .add-event .my-event-title{
+  .overview .my-event-title, .my-events-list .my-event-title, .add-event .my-event-title, .detail .my-event-title{
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
@@ -1758,7 +1784,7 @@ footer ul{
     width: 90%;
   }
 
-  .overview .add-event-title, .my-events-list .add-event-title, .add-event .add-event-title{
+  .overview .add-event-title, .my-events-list .add-event-title, .add-event .add-event-title, .detail .add-event-title{
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
@@ -1769,10 +1795,14 @@ footer ul{
     width: 90%;
   }
 
-  .overview select, .my-events-list select, .add-event select{
+  .overview select, .my-events-list select, .add-event select, .detail select{
     margin-top: 3rem;
     width: 100%;
     margin-right: 0;
+  }
+
+  .my-events-list .this-week {
+    width: 90%;
   }
 
   .event-list {
@@ -1814,6 +1844,39 @@ footer ul{
   .add-button {
     -ms-flex-item-align: start;
         align-self: flex-start;
+  }
+
+  .back {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-left: 2rem;
+  }
+
+  .description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 0
+  }
+
+  .description .event-title-box{
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-left: 10%;
+  }
+
+  .detailbutton {
+    width: 100%;
   }
 
 }
