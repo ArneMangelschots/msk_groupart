@@ -64,10 +64,10 @@ const Event = ({date, hour, what, nUsers, capacity, store, creator, users, _id, 
       </div>
 
       {creator === user &&
-        <button className='remove-button'onClick={handleRemove}>Remove</button>
+        <button className='remove-button'onClick={handleRemove}>Verwijder</button>
       }
       {users.includes(user) && creator !== user &&
-        <button className='leave-button' onClick={handleLeave}>Leave Event</button>
+        <button className='leave-button' onClick={handleLeave}>Schrijf uit</button>
       }
       {!users.includes(user) && creator !== user &&
         <button className='join-button' onClick={handleJoin}>Schrijf in</button>

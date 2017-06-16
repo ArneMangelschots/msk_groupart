@@ -3,7 +3,6 @@
 import React from 'react';
 import {object, string, number} from 'prop-types';
 import {observer, inject, PropTypes as MobxProp} from 'mobx-react';
-import {Link} from 'react-router-dom';
 
 import Message from '../Message';
 
@@ -31,17 +30,6 @@ const EventDetail = ({event, dag, nUsers, store, image}) => {
 
   return (
     <div className='detail'>
-
-      <div className='mobile-nav'>
-        <li className='events-mobile'><Link to='/ontdek'>Events</Link></li>
-        <li className='mijn-events-mobile'>
-          <Link to='/mijnEvents'>Mijn events</Link>
-          {/* <div className='pop-melding'>3</div> */}
-        </li>
-        <li className='event-aanmaken-mobile'>
-          <Link to='/add'>Maak event</Link>
-        </li>
-      </div>
 
       <a href='#' className='back'>
         <strong>&#60;</strong> keer terug
@@ -82,13 +70,13 @@ const EventDetail = ({event, dag, nUsers, store, image}) => {
             <p>{description}</p>
             <div className='maak-button-box'>
               {creator === user &&
-                <button className='remove-button detailbutton'onClick={handleRemove}>Remove</button>
+                <button className='remove-button detailbutton'onClick={handleRemove}>Verwijder</button>
               }
               {users.includes(user) && creator !== user &&
-                <button className='leave-button detailbutton' onClick={handleLeave}>Leave Event</button>
+                <button className='leave-button detailbutton' onClick={handleLeave}>Schrijf uit</button>
               }
               {!users.includes(user) && creator !== user &&
-                <button className='join-button detailbutton' onClick={handleJoin}>Join</button>
+                <button className='join-button detailbutton' onClick={handleJoin}>Schrijf in</button>
               }
             </div>
           </div>
