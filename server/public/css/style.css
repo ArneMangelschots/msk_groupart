@@ -581,10 +581,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  background-image: url(/assets/img/bepart.png);
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: 4%;
 }
 
 
