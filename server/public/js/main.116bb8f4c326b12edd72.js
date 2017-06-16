@@ -31290,7 +31290,7 @@ var Event = function Event(_ref) {
             lineNumber: 67
           }
         },
-        'Remove'
+        'Verwijder'
       ),
       users.includes(user) && creator !== user && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'button',
@@ -31299,7 +31299,7 @@ var Event = function Event(_ref) {
             lineNumber: 70
           }
         },
-        'Leave Event'
+        'Schrijf uit'
       ),
       !users.includes(user) && creator !== user && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'button',
@@ -31403,7 +31403,7 @@ var EventDetail = function EventDetail(_ref) {
       'a',
       { href: '#', className: 'back', __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 34
         }
       },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -31411,7 +31411,7 @@ var EventDetail = function EventDetail(_ref) {
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 34
+            lineNumber: 35
           }
         },
         '<'
@@ -31421,28 +31421,28 @@ var EventDetail = function EventDetail(_ref) {
     infoMessage.length > 0 && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Message__["a" /* default */], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 38
       }
     }),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
       { className: 'detail-content', __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 40
         }
       },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: 'practical', __source: {
             fileName: _jsxFileName,
-            lineNumber: 40
+            lineNumber: 41
           }
         },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
           { className: 'datum-box', __source: {
               fileName: _jsxFileName,
-              lineNumber: 41
+              lineNumber: 42
             }
           },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -31450,7 +31450,7 @@ var EventDetail = function EventDetail(_ref) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 42
+                lineNumber: 43
               }
             },
             date
@@ -31460,7 +31460,7 @@ var EventDetail = function EventDetail(_ref) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 43
+                lineNumber: 44
               }
             },
             dag
@@ -31470,31 +31470,31 @@ var EventDetail = function EventDetail(_ref) {
           'div',
           { className: 'practical-picture', __source: {
               fileName: _jsxFileName,
-              lineNumber: 46
+              lineNumber: 47
             }
           },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: '../assets/img/' + image + '.jpg', width: '250', height: '200', __source: {
               fileName: _jsxFileName,
-              lineNumber: 47
+              lineNumber: 48
             }
           }),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
             { className: 'practical-box', __source: {
                 fileName: _jsxFileName,
-                lineNumber: 48
+                lineNumber: 49
               }
             },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'div',
               { className: 'time-box', __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 49
+                  lineNumber: 50
                 }
               },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'timer', __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 50
+                  lineNumber: 51
                 }
               }),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -31502,7 +31502,7 @@ var EventDetail = function EventDetail(_ref) {
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 51
+                    lineNumber: 52
                   }
                 },
                 hour
@@ -31512,12 +31512,12 @@ var EventDetail = function EventDetail(_ref) {
               'div',
               { className: 'group-box', __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 53
+                  lineNumber: 54
                 }
               },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'group-icon', __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 54
+                  lineNumber: 55
                 }
               }),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -31525,7 +31525,7 @@ var EventDetail = function EventDetail(_ref) {
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 55
+                    lineNumber: 56
                   }
                 },
                 nUsers,
@@ -31540,14 +31540,14 @@ var EventDetail = function EventDetail(_ref) {
         'div',
         { className: 'description', __source: {
             fileName: _jsxFileName,
-            lineNumber: 61
+            lineNumber: 62
           }
         },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
           { className: 'event-title-box', __source: {
               fileName: _jsxFileName,
-              lineNumber: 62
+              lineNumber: 63
             }
           },
           what !== 'Vrij museumbezoek' && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -31555,7 +31555,7 @@ var EventDetail = function EventDetail(_ref) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 64
+                lineNumber: 65
               }
             },
             'tentoonstelling'
@@ -31565,7 +31565,7 @@ var EventDetail = function EventDetail(_ref) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 66
+                lineNumber: 67
               }
             },
             what
@@ -31575,7 +31575,7 @@ var EventDetail = function EventDetail(_ref) {
           'div',
           { className: 'description-box', __source: {
               fileName: _jsxFileName,
-              lineNumber: 68
+              lineNumber: 69
             }
           },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -31583,7 +31583,7 @@ var EventDetail = function EventDetail(_ref) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 69
+                lineNumber: 70
               }
             },
             description
@@ -31592,35 +31592,35 @@ var EventDetail = function EventDetail(_ref) {
             'div',
             { className: 'maak-button-box', __source: {
                 fileName: _jsxFileName,
-                lineNumber: 70
+                lineNumber: 71
               }
             },
             creator === user && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'button',
-              { className: 'remove-button', onClick: handleRemove, __source: {
+              { className: 'remove-button detailbutton', onClick: handleRemove, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 72
+                  lineNumber: 73
                 }
               },
-              'Remove'
+              'Verwijder'
             ),
             users.includes(user) && creator !== user && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'button',
-              { className: 'leave-button', onClick: handleLeave, __source: {
+              { className: 'leave-button detailbutton', onClick: handleLeave, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 75
+                  lineNumber: 76
                 }
               },
-              'Leave Event'
+              'Schrijf uit'
             ),
             !users.includes(user) && creator !== user && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'button',
-              { className: 'join-button', onClick: handleJoin, __source: {
+              { className: 'join-button detailbutton', onClick: handleJoin, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 78
+                  lineNumber: 79
                 }
               },
-              'Join'
+              'Schrijf in'
             )
           )
         )
@@ -32222,7 +32222,7 @@ var Logout = function Logout(_ref) {
           lineNumber: 16
         }
       },
-      'Welcome, ',
+      'Welkom, ',
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'strong',
         {
@@ -32289,14 +32289,14 @@ var MijnEventsList = function MijnEventsList(_ref) {
     'div',
     { className: 'my-events-list', __source: {
         fileName: _jsxFileName,
-        lineNumber: 18
+        lineNumber: 17
       }
     },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'header',
       { className: 'my-event-title', __source: {
           fileName: _jsxFileName,
-          lineNumber: 19
+          lineNumber: 18
         }
       },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -32304,7 +32304,7 @@ var MijnEventsList = function MijnEventsList(_ref) {
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 20
+            lineNumber: 19
           }
         },
         'Mijn Events'
@@ -32313,14 +32313,14 @@ var MijnEventsList = function MijnEventsList(_ref) {
     infoMessage.length > 0 && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Message__["a" /* default */], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 23
+        lineNumber: 22
       }
     }),
     createdEvents.length === 0 && signedEvents.length === 0 && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
       { className: 'no-events', __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 25
         }
       },
       'Geen events gevonden, ',
@@ -32328,7 +32328,7 @@ var MijnEventsList = function MijnEventsList(_ref) {
         __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["e" /* Link */],
         { to: '/add', __source: {
             fileName: _jsxFileName,
-            lineNumber: 26
+            lineNumber: 25
           }
         },
         'Maak er eentje aan'
@@ -32338,7 +32338,7 @@ var MijnEventsList = function MijnEventsList(_ref) {
         __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["e" /* Link */],
         { to: '/ontdek', __source: {
             fileName: _jsxFileName,
-            lineNumber: 26
+            lineNumber: 25
           }
         },
         'Schrijf je in!'
@@ -32347,12 +32347,12 @@ var MijnEventsList = function MijnEventsList(_ref) {
     ),
     createdEvents.length > 0 && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__ListPart__["a" /* default */], { events: createdEvents, title: 'Aangemaakte events', __source: {
         fileName: _jsxFileName,
-        lineNumber: 29
+        lineNumber: 28
       }
     }),
     signedEvents.length > 0 && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__ListPart__["a" /* default */], { events: signedEvents, title: 'Ingeschreven', __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 31
       }
     })
   );
@@ -49468,4 +49468,4 @@ module.exports = __webpack_require__(217);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=main.927daad213f91b7cf8ea.js.map
+//# sourceMappingURL=main.116bb8f4c326b12edd72.js.map

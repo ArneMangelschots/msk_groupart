@@ -30,6 +30,7 @@ const EventDetail = ({event, dag, nUsers, store, image}) => {
 
   return (
     <div className='detail'>
+
       <a href='#' className='back'>
         <strong>&#60;</strong> keer terug
       </a>
@@ -69,13 +70,13 @@ const EventDetail = ({event, dag, nUsers, store, image}) => {
             <p>{description}</p>
             <div className='maak-button-box'>
               {creator === user &&
-                <button className='remove-button'onClick={handleRemove}>Remove</button>
+                <button className='remove-button detailbutton'onClick={handleRemove}>Verwijder</button>
               }
               {users.includes(user) && creator !== user &&
-                <button className='leave-button' onClick={handleLeave}>Leave Event</button>
+                <button className='leave-button detailbutton' onClick={handleLeave}>Schrijf uit</button>
               }
               {!users.includes(user) && creator !== user &&
-                <button className='join-button' onClick={handleJoin}>Join</button>
+                <button className='join-button detailbutton' onClick={handleJoin}>Schrijf in</button>
               }
             </div>
           </div>

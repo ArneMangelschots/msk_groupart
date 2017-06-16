@@ -13,7 +13,7 @@ const Logout = ({store}) => {
 
   return (
     <div className='login-welkom'>
-      <p>Welcome, <strong>{user}</strong> <a href='#' onClick={handleClick}> | log uit</a></p>
+      <p>Welkom, <strong>{user}</strong> <a href='#' onClick={handleClick}> | log uit</a></p>
     </div>
   );
 };

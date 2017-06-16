@@ -55,7 +55,7 @@ html {
 *, *::before, *::after { /* stylelint-disable-line */
   box-sizing: inherit;
 }
-input:focus, select:focus, textarea:focus {
+input:focus, select:focus, textarea:focus, button:focus {
   outline: none;
 }
 
@@ -708,8 +708,12 @@ body {
           align-items: center;
   list-style-type: none;
   width: 90%;
-  margin: 16px 48px;
-  margin: 1rem 3rem
+  font-family: oak-bold;
+  margin: 176px 0 64px;
+  margin: 11rem 0 4rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center
 }
 
 
@@ -859,8 +863,8 @@ body {
   padding: 8px;
   padding: .5rem;
   color: white;
-  width: 240px;
-  width: 15rem;
+  width: 304px;
+  width: 19rem;
   margin-top: 64px;
   margin-top: 4rem;
 }
@@ -1041,12 +1045,15 @@ body {
 
 .leave-button {
   background-color: red;
-  border: none;
+  border: 4.8px solid red;
+  border: .3rem solid red;
   color: white;
   font-family: oak-bold;
   cursor: pointer;
   width: 128px;
   width: 8rem;
+  padding: 16px 0;
+  padding: 1rem 0;
   transition: all .5s ease-out;
 }
 
@@ -1079,12 +1086,8 @@ body {
 /////////// EVENT AANMAKEN ///////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////*/
 
-
-
 .add-event {
 }
-
-
 
 .add-event .add-event-title{
   font-size: 80px;
@@ -1372,8 +1375,10 @@ footer ul{
 }
 
 .detail-content {
-  margin-top: 160px;
-  margin-top: 10rem;
+  margin-top: 80px;
+  margin-top: 5rem;
+  margin-left: 80px;
+  margin-left: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1412,7 +1417,9 @@ footer ul{
           flex-flow: column nowrap;
   -webkit-box-align: end;
       -ms-flex-align: end;
-          align-items: flex-end
+          align-items: flex-end;
+  margin-bottom: 32px;
+  margin-bottom: 2rem
 }
 
 .datum-box h1{
@@ -1483,6 +1490,8 @@ footer ul{
 
 .description {
   margin-left: 7%;
+  margin-top: 112px;
+  margin-top: 7rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1522,7 +1531,18 @@ footer ul{
 .description-box {
   margin-top: 48px;
   margin-top: 3rem;
-  width: 80%
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  height: 20vh
 }
 
 .description-box p{
@@ -1579,16 +1599,13 @@ footer ul{
 
 @media (max-width: 1200px) {
 
-  .overview, .my-events-list, .add-event {
+  .overview, .my-events-list, .add-event, .detail {
     margin-left: 10rem;
     padding-left: 10rem;
     width: 87vw;
   }
 
-
-
 }
-
 
 @media (max-width: 1024px) {
 
@@ -1612,9 +1629,37 @@ footer ul{
     width: 12vw;
   }
 
+  .detail-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    margin-bottom: 15vh;
+    margin-left: 0;
+  }
+
+  .practical {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+
 }
 
 @media (max-width: 900px) {
+
+  .popup {
+  }
+
+  .popup h1{
+    font-size: 8vw;
+  }
+
+  .popup .popup-info{
+    width: 85%;
+  }
+
+
 
   .register-box {
     top: 10%;
@@ -1732,10 +1777,10 @@ footer ul{
     display: none;
   }
 
-  .overview, .my-events-list, .add-event {
+  .overview, .my-events-list, .add-event, .detail {
     margin-left: 0;
     padding-left: 0;
-    padding-top: 10rem;
+    padding-top: 0;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1749,7 +1794,7 @@ footer ul{
             align-items: center
   }
 
-  .overview .event-title, .my-events-list .event-title, .add-event .event-title{
+  .overview .event-title, .my-events-list .event-title, .add-event .event-title, .detail .event-title{
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
@@ -1760,7 +1805,7 @@ footer ul{
     width: 90%;
   }
 
-  .overview .my-event-title, .my-events-list .my-event-title, .add-event .my-event-title{
+  .overview .my-event-title, .my-events-list .my-event-title, .add-event .my-event-title, .detail .my-event-title{
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
@@ -1771,7 +1816,7 @@ footer ul{
     width: 90%;
   }
 
-  .overview .add-event-title, .my-events-list .add-event-title, .add-event .add-event-title{
+  .overview .add-event-title, .my-events-list .add-event-title, .add-event .add-event-title, .detail .add-event-title{
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
@@ -1782,10 +1827,14 @@ footer ul{
     width: 90%;
   }
 
-  .overview select, .my-events-list select, .add-event select{
+  .overview select, .my-events-list select, .add-event select, .detail select{
     margin-top: 3rem;
     width: 100%;
     margin-right: 0;
+  }
+
+  .my-events-list .this-week {
+    width: 90%;
   }
 
   .event-list {
@@ -1829,6 +1878,54 @@ footer ul{
         align-self: flex-start;
   }
 
+  .back {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-left: 2rem;
+  }
+
+  .description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 0
+  }
+
+  .description .event-title-box{
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-left: 10%;
+  }
+
+  .detailbutton {
+    width: 100%;
+  }
+
+  .main-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+}
+
+@media (max-width: 410px) {
+
+  .mobile-nav li {
+    font-size: 1.4rem;
+  }
+
 }
 
 @media (max-width: 400px) {
@@ -1860,10 +1957,15 @@ footer ul{
         -ms-flex-pack: center;
             justify-content: center;
     padding-right: 0;
+    top: 28%;
   }
 
   .register-box {
     top: 0;
+  }
+
+  .popup h1 {
+    font-size: 10vw;
   }
 
 }

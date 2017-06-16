@@ -7,7 +7,6 @@ import {Link} from 'react-router-dom';
 import ListPart from '../ListPart';
 import Message from '../Message';
 
-
 const MijnEventsList = ({store}) => {
 
   const {createdEvents, signedEvents, infoMessage} = store;
