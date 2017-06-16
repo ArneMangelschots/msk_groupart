@@ -6,7 +6,12 @@ const Popup = () => {
     <div className='popup'>
       <div className='popup-info'>
         <h1>Over Groupart</h1>
-        <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas faucibus mollis interdum. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+        <p>
+          Groupart is een web-applicatie die jou helpt om andere kunstliefhebbers te ontmoeten en samen met onbekenden te genieten van kunst.
+          Na registratie heb je de mogelijkheid om je in te schrijven in events die aangemaakt zijn door andere Groupart gebruikers. Vind je geen event
+          dat voor jou past? Je kan eenvoudig zelf een event aanmaken waar anderen zich op kunnen inschrijven.
+
+        </p>
       </div>
     </div>
   );

@@ -1,18 +1,21 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {withRouter} from 'react-router';
 
-const MobileNav = () => {
+import {object} from 'prop-types';
+
+const MobileNav = ({history}) => {
   return (
     <div className='mobile-nav'>
-      <li className='events-mobile'><Link to='/ontdek'>Events</Link></li>
-      <li className='mijn-events-mobile'>
-        <Link to='/mijnEvents'>Mijn events</Link>
-      </li>
-      <li className='event-aanmaken-mobile'>
-        <Link to='/add'>Maak event</Link>
-      </li>
+      <Link to='/ontdek' className={history.location.pathname === `/ontdek` ? `active` : ``}>Events</Link>
+      <Link to='/mijnEvents' className={history.location.pathname === `/mijnEvents` ? `active` : ``}>Mijn events</Link>
+      <Link to='/add' className={history.location.pathname === `/add` ? `active` : ``}>Maak event</Link>
     </div>
   );
 };
 
-export default MobileNav;
+MobileNav.propTypes = {
+  history: object.isRequired
+};
+
+export default withRouter(MobileNav);
