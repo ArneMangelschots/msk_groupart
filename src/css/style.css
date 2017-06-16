@@ -360,10 +360,6 @@ body {
 .main-container {
   display: flex;
   flex-flow: row nowrap;
-  background-image: url(../assets/img/bepart.png);
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: 4%;
 }
 
 
@@ -559,7 +555,7 @@ body {
     background-color: black;
     padding: .5rem;
     color: white;
-    width: 15rem;
+    width: 19rem;
     margin-top: 4rem;
   }
 }
@@ -1310,6 +1306,14 @@ footer {
 
   .main-container {
     flex-direction: column;
+  }
+
+}
+
+@media (width <= 410px) {
+
+  .mobile-nav li {
+    font-size: 1.4rem;
   }
 
 }

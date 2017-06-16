@@ -3,12 +3,10 @@
 import React from 'react';
 import {object, string, number} from 'prop-types';
 import {observer, inject, PropTypes as MobxProp} from 'mobx-react';
-
+import {withRouter} from 'react-router';
 import Message from '../Message';
 
-const EventDetail = ({event, dag, nUsers, store, image}) => {
-
-  console.log(image);
+const EventDetail = ({event, dag, nUsers, store, image, history}) => {
 
   const {what, date, description, hour, capacity, creator, _id, users} = event;
   const {user, joinEvent, leaveEvent, removeEvent, setMessage, infoMessage} = store;
@@ -28,10 +26,15 @@ const EventDetail = ({event, dag, nUsers, store, image}) => {
     setMessage(`Het event is verwijderd`);
   };
 
+  const handleBack = e => {
+    e.preventDefault();
+    history.goBack();
+  };
+
   return (
     <div className='detail'>
 
-      <a href='#' className='back'>
+      <a href='#' onClick={handleBack} className='back'>
         <strong>&#60;</strong> keer terug
       </a>
       {infoMessage.length > 0 &&
@@ -93,10 +96,11 @@ EventDetail.propTypes = {
   dag: string.isRequired,
   nUsers: number.isRequired,
   store: MobxProp.observableObject.isRequired,
-  image: string.isRequired
+  image: string.isRequired,
+  history: object.isRequired
 };
 
 
 export default inject(`store`)(
-  observer(EventDetail)
+  withRouter(observer(EventDetail))
 );

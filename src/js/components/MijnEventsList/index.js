@@ -11,8 +11,6 @@ const MijnEventsList = ({store}) => {
 
   const {createdEvents, signedEvents, infoMessage} = store;
 
-  console.log(createdEvents);
-
   return (
     <div className='my-events-list'>
       <header className='my-event-title'>

@@ -609,10 +609,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  background-image: url(/assets/img/bepart.png);
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: 4%;
 }
 
 
@@ -895,8 +891,8 @@ body {
   padding: 8px;
   padding: .5rem;
   color: white;
-  width: 240px;
-  width: 15rem;
+  width: 304px;
+  width: 19rem;
   margin-top: 64px;
   margin-top: 4rem;
 }
@@ -1948,6 +1944,14 @@ footer ul{
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+}
+
+@media (max-width: 410px) {
+
+  .mobile-nav li {
+    font-size: 1.4rem;
   }
 
 }
